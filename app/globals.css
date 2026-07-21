@@ -1,0 +1,123 @@
+@import "tailwindcss";
+@import "tailwindcss/preflight";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+
+  --color60: #F4EEFF;
+  --color30: #DCD6F7;
+  --color10: #A6B1E1;
+  --color-text: #424874;
+  --colortextGrey: #888;
+
+  --color-ink: #0F0F0D;
+  --color-cream: #F7F5F0;
+  --color-divider: rgba(15, 15, 13, 0.1);
+  --color-text-secondary: #555;
+  --color-text-tertiary: #777;
+  --color-text-muted: #999;
+  --color-text-faint: #bbb;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+
+    --color60: #F4EEFF;
+    --color30: #DCD6F7;
+    --color10: #A6B1E1;
+    --color-text: #424874;
+    --colortextGrey: #888;
+
+    --color-ink: #0F0F0D;
+    --color-cream: #F7F5F0;
+    --color-divider: rgba(15, 15, 13, 0.1);
+    --color-text-secondary: #555;
+    --color-text-tertiary: #777;
+    --color-text-muted: #999;
+    --color-text-faint: #bbb;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Simply target your elements directly under the import line. 
+   Tailwind v4 automatically manages element cascading priority. */
+h1 {
+  color: var(--color-text); /* Hooks right into your variable */
+}
+
+/* Core Layout Utilities */
+
+.root-layout {
+  min-height: 100vh;
+  /* Uses your default color30 fallback if the variable isn't fully loaded */
+  background: var(--color60, #F7F5F0); 
+  color: var(--foreground, #171717);
+}
+
+.section-padding {
+  padding: 80px 0;
+}
+
+.layout-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* Accessible Interactive Reset Button */
+.btn-reset {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  text-align: left;
+  color: inherit;
+  font-family: inherit;
+}
+
+.btn-reset:focus-visible {
+  outline: 2px solid var(--foreground, #171717);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+/* Shared patterns used by BOTH app/pages/ and app/components/. Pages-only
+   goes in app/pages/pages.css; components-only goes in
+   app/components/components.css. */
+
+.divider-bottom {
+  border-bottom: 1px solid var(--color-divider);
+}
+
+.eyebrow {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.eyebrow--on-dark {
+  color: rgba(247, 245, 240, 0.4);
+}
+
+.panel-dark {
+  background: var(--color-ink);
+  border-radius: 20px;
+  padding: 80px clamp(32px, 6vw, 80px);
+}
+
+.link-lg {
+  font-weight: 800;
+  font-size: clamp(22px, 3vw, 36px);
+  letter-spacing: -0.01em;
+  text-decoration: none;
+  color: var(--color-ink);
+}

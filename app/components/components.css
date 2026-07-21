@@ -1,0 +1,319 @@
+/* Styles only used by components under app/components/. Shared with
+   app/pages/ goes in globals.css; pages-only goes in app/pages/pages.css. */
+
+.divider-top {
+  border-top: 1px solid var(--color-divider);
+}
+
+/* Nav */
+
+.nav-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  padding: 16px;
+  pointer-events: none;
+  transition: all 0.3s;
+}
+
+@media (min-width: 768px) {
+  .nav-header {
+    padding: 24px;
+  }
+}
+
+.nav-bar {
+  width: 100%;
+  max-width: 1152px;
+  height: 64px;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  pointer-events: auto;
+  border-radius: 12px;
+  transition: all 0.3s;
+  background: #000;
+  border: 1px solid color-mix(in srgb, var(--color-text) 30%, transparent);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -4px rgba(0, 0, 0, 0.3);
+}
+
+.nav-logo {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-align: left;
+  font-weight: 800;
+  font-size: 18px;
+  color: var(--color60);
+  letter-spacing: -0.025em;
+  border-radius: 6px;
+}
+
+.nav-logo:focus-visible {
+  outline-offset: 4px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+}
+
+.nav-link {
+  background: transparent;
+  border: none;
+  padding: 0;
+  padding-bottom: 2px;
+  cursor: pointer;
+  font-size: 14px;
+  position: relative;
+  transition: opacity 0.2s;
+  border-radius: 4px;
+  color: var(--color60);
+  opacity: 0.65;
+}
+
+.nav-link:hover {
+  opacity: 1;
+}
+
+.nav-link--active {
+  opacity: 1;
+}
+
+.nav-underline {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 1.5px;
+  background: var(--color60);
+  transform-origin: left;
+  transition: transform 0.3s ease-out;
+}
+
+/* Footer */
+
+.footer {
+  padding: 40px 0 32px;
+  position: relative;
+  z-index: 1;
+}
+
+.footer-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+
+.footer-brand {
+  font-weight: 800;
+  font-size: 18px;
+  color: var(--color-ink);
+  margin-bottom: 6px;
+}
+
+.footer-location {
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+.footer-columns {
+  display: flex;
+  gap: 56px;
+  flex-wrap: wrap;
+}
+
+.footer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+}
+
+.footer-link {
+  font-size: 14px;
+  color: var(--color-text-tertiary);
+  font-weight: 400;
+  transition: opacity 0.15s;
+}
+
+.footer-link--active {
+  color: var(--color-ink);
+  font-weight: 500;
+}
+
+.footer-social-link {
+  font-size: 14px;
+  color: var(--color-text-tertiary);
+  text-decoration: none;
+}
+
+/* SectionLabel */
+
+.section-label {
+  padding-bottom: 14px;
+  margin-bottom: 32px;
+}
+
+/* TestimonialCard */
+
+.testimonial-card {
+  background: var(--color10);
+  border-radius: 16px;
+  padding: 32px 28px 26px;
+}
+
+.testimonial-quote {
+  font-style: italic;
+  font-size: 16px;
+  line-height: 1.75;
+  color: #2A2A28;
+  margin-bottom: 28px;
+}
+
+.testimonial-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.testimonial-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 12px;
+  color: var(--color-ink);
+  flex-shrink: 0;
+}
+
+.testimonial-name {
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--color-ink);
+}
+
+.testimonial-role {
+  font-size: 12px;
+  color: var(--colortextGrey);
+}
+
+/* WorkCard */
+
+.work-card {
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--foreground) 10%, transparent);
+  cursor: pointer;
+  transition: transform 0.22s ease-out;
+}
+
+.work-card:hover {
+  transform: translateY(-4px);
+}
+
+.work-card-media {
+  height: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.work-card-category-badge {
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  color: color-mix(in srgb, var(--color-ink) 25%, transparent);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.work-card-badge {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--color-ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: scale(0.75);
+  transition: all 0.2s ease-out;
+}
+
+.work-card:hover .work-card-badge {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.work-card-badge-arrow {
+  color: var(--color-cream);
+  font-size: 14px;
+  font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+}
+
+.work-card-body {
+  background: var(--color60);
+  padding: 18px 22px 22px;
+}
+
+.work-card-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.work-card-title {
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-ink);
+  line-height: 1.25;
+}
+
+.work-card-year {
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  color: var(--color-text-faint);
+  padding-top: 3px;
+  flex-shrink: 0;
+}
+
+.work-card-desc {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  color: var(--color-text-tertiary);
+  line-height: 1.625;
+}
+
+.work-card-tag {
+  display: inline-block;
+  margin-top: 12px;
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
+  color: var(--color-text-muted);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border: 1px solid color-mix(in srgb, var(--foreground) 15%, transparent);
+  border-radius: 9999px;
+  padding: 2px 10px;
+}
