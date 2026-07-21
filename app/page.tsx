@@ -35,19 +35,6 @@ export default function App() {
 
   return (
     <div className="root-layout">
-      <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Inter:ital,wght@0,400;1,400&display=swap');
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        ::selection { background: #0F0F0D; color: #F7F5F0; }
-        .bg-lines { position: fixed; inset: 0; pointer-events: none; z-index: 0; display: grid; grid-template-columns: repeat(9, 1fr); }
-        .bg-line { border-left: 1px solid rgba(15,15,13,0.055); height: 100vh; }
-        @media (max-width: 768px) { .bg-line:nth-child(n+4) { display: none; } }
-        @media (max-width: 768px) {
-          .grid-2col { grid-template-columns: 1fr !important; }
-          .hide-mobile { display: none !important; }
-        }
-      `}</style>
-
       <Nav activePage={activePage} navigate={navigate} scrolled={scrolled} />
 
       <main style={{ position: "relative", zIndex: 1 }}>

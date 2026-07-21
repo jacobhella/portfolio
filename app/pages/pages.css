@@ -11,7 +11,7 @@
   font-weight: 800;
   letter-spacing: -0.02em;
   line-height: 1.0;
-  color: var(--color-ink);
+  color: var(--color10);
 }
 
 .heading-section {
@@ -19,7 +19,7 @@
   font-weight: 800;
   letter-spacing: -0.02em;
   line-height: 1.1;
-  color: var(--color-ink);
+  color: var(--color10);
 }
 
 .body-lede {
@@ -114,7 +114,7 @@
   align-items: center;
   justify-content: center;
   font-size: 18px;
-  color: var(--color-ink);
+  color: var(--color10);
   transition: background 0.15s;
   cursor: pointer;
 }
@@ -157,7 +157,7 @@
 .about-clients-grid > div {
   font-size: clamp(17px, 2.2vw, 24px);
   font-weight: 700;
-  color: var(--color-ink);
+  color: var(--color10);
   padding: 16px 0;
   border-top: 1px solid var(--color-divider);
 }
@@ -194,7 +194,7 @@
   font-size: clamp(38px, 6.5vw, 78px);
   font-weight: 800;
   line-height: 1.05;
-  color: var(--color-ink);
+  color: var(--color10);
   letter-spacing: -0.02em;
   grid-column: 1 / -1;
   max-width: 900px;
@@ -226,7 +226,7 @@
 .home-service-label {
   font-size: 15px;
   font-weight: 700;
-  color: var(--color-ink);
+  color: var(--color10);
 }
 
 .home-work-header {
@@ -239,7 +239,7 @@
 
 .home-view-all {
   font-size: 13px;
-  color: var(--color-ink);
+  color: var(--color10);
   text-decoration: underline;
   text-underline-offset: 3px;
 }
@@ -267,7 +267,7 @@
 .home-about-heading {
   font-size: clamp(26px, 3.5vw, 44px);
   font-weight: 800;
-  color: var(--color-cream);
+  color: var(--color10);
   line-height: 1.1;
   letter-spacing: -0.02em;
   margin-bottom: 28px;
@@ -276,15 +276,15 @@
 .home-about-link {
   font-weight: 700;
   font-size: 16px;
-  color: var(--color-cream);
-  border-bottom: 1px solid rgba(247, 245, 240, 0.3);
+  color: var(--color10);
+  border-bottom: 1px solid color-mix(in srgb, var(--color-ink) 30%, transparent);
   padding-bottom: 3px;
 }
 
 .home-about-copy {
   font-size: 16px;
   line-height: 1.8;
-  color: rgba(247, 245, 240, 0.6);
+  color: var(--color-text-secondary);
 }
 
 .home-about-copy p:first-child {
@@ -306,7 +306,7 @@
   font-weight: 800;
   letter-spacing: -0.02em;
   line-height: 1;
-  color: var(--color-ink);
+  color: var(--color10);
 }
 
 .writing-row {
@@ -344,7 +344,7 @@
 .writing-row-title {
   font-size: clamp(15px, 2vw, 20px);
   font-weight: 700;
-  color: var(--color-ink);
+  color: var(--color10);
   line-height: 1.375;
   min-width: 0;
 }
@@ -363,7 +363,7 @@
 
 .writing-row-arrow {
   font-size: 16px;
-  color: var(--color-ink);
+  color: var(--color10);
   opacity: 0.3;
   transition: opacity 0.15s ease;
 }

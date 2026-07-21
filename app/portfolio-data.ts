@@ -27,6 +27,11 @@ export interface Service {
   label: string;
 }
 
+export interface Social {
+  name: string;
+  url: string;
+}
+
 export interface Contacts {
   name: string;
   email: string;
@@ -70,7 +75,10 @@ export const SERVICES: Service[] = [
   { num: "04", label: "Backend Developer" },
 ];
 
-export const SOCIALS: string[] = ["GitHub", "Dribble", "Instagram", "Threads"];
+export const SOCIALS: Social[] = [
+  { name: "GitHub", url: "https://github.com/jacobhella" },
+  { name: "LinkedIn", url: "https://www.linkedin.com/in/jacob-hellstr%C3%B6m-876227203/" },
+];
 
 export const CONTACTS: Contacts = {
   name: "Jacob Hellström",

@@ -1,4 +1,5 @@
 import { CONTACTS, SOCIALS} from "@/app/portfolio-data";
+import { SocialIcon, EmailIcon } from "@/app/components/icons";
 import "@/app/pages/pages.css";
 
 export function ContactPage() {
@@ -15,7 +16,10 @@ export function ContactPage() {
             </p>
 
             <div className="contact-link-stack">
-              <a href={`mailto:${CONTACTS.email}`} className="link-lg">{CONTACTS.email}</a>
+              <a href={`mailto:${CONTACTS.email}`} className="link-lg social-link">
+                <EmailIcon className="social-icon" />
+                {CONTACTS.email}
+              </a>
             </div>
           </div>
         </div>
@@ -29,7 +33,12 @@ export function ContactPage() {
             <h2 className="heading-section">Social</h2>
 
             <div className="contact-social-stack">
-              {SOCIALS.map((s) => <a key={s} href="#" className="link-lg">{s}</a>)}
+              {SOCIALS.map((s) => (
+                <a key={s.name} href={s.url} target="_blank" rel="noopener noreferrer" className="link-lg social-link">
+                  <SocialIcon name={s.name} className="social-icon" />
+                  {s.name}
+                </a>
+              ))}
             </div>
           </div>
         </div>

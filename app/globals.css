@@ -5,9 +5,9 @@
   --background: #ffffff;
   --foreground: #171717;
 
-  --color60: #F4EEFF;
-  --color30: #DCD6F7;
-  --color10: #A6B1E1;
+  --color60: #E7F6F2;
+  --color30: #A5C9CA;
+  --color10: #2C3333;
   --color-text: #424874;
   --colortextGrey: #888;
 
@@ -25,9 +25,9 @@
     --background: #0a0a0a;
     --foreground: #ededed;
 
-    --color60: #F4EEFF;
-    --color30: #DCD6F7;
-    --color10: #A6B1E1;
+    --color60: #E7F6F2;
+    --color30: #A5C9CA;
+    --color10: #2C3333;
     --color-text: #424874;
     --colortextGrey: #888;
 
@@ -45,6 +45,45 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+::selection {
+  background: #0F0F0D;
+  color: #F7F5F0;
+}
+
+.bg-lines {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+}
+
+.bg-line {
+  border-left: 1px solid rgba(15, 15, 13, 0.055);
+  height: 100vh;
+}
+
+@media (max-width: 768px) {
+  .bg-line:nth-child(n+4) {
+    display: none;
+  }
+
+  .grid-2col {
+    grid-template-columns: 1fr !important;
+  }
+
+  .hide-mobile {
+    display: none !important;
+  }
 }
 
 /* Simply target your elements directly under the import line. 
@@ -104,12 +143,8 @@ h1 {
   color: var(--color-text-muted);
 }
 
-.eyebrow--on-dark {
-  color: rgba(247, 245, 240, 0.4);
-}
-
-.panel-dark {
-  background: var(--color-ink);
+.panel-accent {
+  background: var(--color30);
   border-radius: 20px;
   padding: 80px clamp(32px, 6vw, 80px);
 }
@@ -119,5 +154,17 @@ h1 {
   font-size: clamp(22px, 3vw, 36px);
   letter-spacing: -0.01em;
   text-decoration: none;
-  color: var(--color-ink);
+  color: var(--color10);
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+}
+
+.social-icon {
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
 }

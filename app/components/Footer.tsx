@@ -1,4 +1,5 @@
 import { PageName, SOCIALS, CONTACTS } from "@/app/portfolio-data";
+import { SocialIcon } from "@/app/components/icons";
 import "@/app/components/components.css";
 
 interface NavProps {
@@ -30,7 +31,12 @@ export function Footer({ activePage, navigate }: NavProps) {
 
           <ul className="footer-list">
             {SOCIALS.map((l) => (
-              <li key={l}><a href="#" className="footer-social-link">{l}</a></li>
+              <li key={l.name}>
+                <a href={l.url} target="_blank" rel="noopener noreferrer" className="footer-social-link social-link">
+                  <SocialIcon name={l.name} className="social-icon" />
+                  {l.name}
+                </a>
+              </li>
             ))}
           </ul>
         </div>

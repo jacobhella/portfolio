@@ -57,10 +57,10 @@ export function HomePage({ navigate }: PageProps) {
 
       {/* About strip */}
       <section className="home-about-section">
-        <div className="panel-dark home-about-panel">
+        <div className="panel-accent home-about-panel">
           <div className="home-about-grid">
             <div>
-              <p className="eyebrow eyebrow--on-dark home-about-eyebrow">About</p>
+              <p className="eyebrow home-about-eyebrow">About</p>
 
               <h2 className="home-about-heading">
                 Design that does something — not just something that looks good.
