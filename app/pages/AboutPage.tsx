@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 import { CLIENTS, TESTIMONIALS} from "@/app/portfolio-data";
 import { SectionLabel } from "@/app/components/SectionLabel";

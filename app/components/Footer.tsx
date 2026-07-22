@@ -1,21 +1,22 @@
-import { PageName, SOCIALS, CONTACTS } from "@/app/portfolio-data";
+"use client";
+
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { PageName, PAGE_PATHS, SOCIALS, CONTACTS } from "@/app/portfolio-data";
 import { SocialIcon, EmailIcon } from "@/app/components/icons";
 import "@/app/components/components.css";
 
-interface NavProps {
-  activePage: PageName;
-  navigate: (page: PageName) => void;
-}
+export function Footer() {
+  const pathname = usePathname();
 
-export function Footer({ activePage, navigate }: NavProps) {
   return (
     <footer className="footer divider-top">
       <div className="layout-container footer-row">
         <div className="footer-columns">
           <div>
-            <button onClick={() => navigate("Home")} className="btn-reset footer-brand">
+            <Link href={PAGE_PATHS.Home} className="footer-brand">
               {CONTACTS.name}
-            </button>
+            </Link>
             <p className="footer-location">{CONTACTS.location}</p>
           </div>
 
@@ -40,9 +41,9 @@ export function Footer({ activePage, navigate }: NavProps) {
         <ul className="footer-list">
           {(["Work", "Writing", "About", "Contact"] as PageName[]).map((l) => (
             <li key={l}>
-              <button onClick={() => navigate(l)} className={`btn-reset footer-link ${l === activePage ? "footer-link--active" : ""}`}>
+              <Link href={PAGE_PATHS[l]} className={`footer-link ${pathname === PAGE_PATHS[l] ? "footer-link--active" : ""}`}>
                 {l}
-              </button>
+              </Link>
             </li>
           ))}
         </ul>

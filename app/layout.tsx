@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Inter, Bricolage_Grotesque } from "next/font/google";
+import { Nav } from "@/app/components/Nav";
+import { Footer } from "@/app/components/Footer";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -28,8 +30,8 @@ const bricolageGrotesque = Bricolage_Grotesque({
 });
 
 export const metadata: Metadata = {
-  title: "My Portfolio",
-  description: "A simple portfolio website",
+  title: "Jacob Hellström",
+  description: "The portfolio of Jacob Hellström, a software engineer and web developer.",
 };
 
 export default function RootLayout({
@@ -40,9 +42,19 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} ${bricolageGrotesque.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} ${bricolageGrotesque.variable}`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body>
+        <div className="root-layout">
+          <Nav />
+
+          <main style={{ position: "relative", zIndex: 1 }}>
+            {children}
+          </main>
+
+          <Footer />
+        </div>
+      </body>
     </html>
   );
 }

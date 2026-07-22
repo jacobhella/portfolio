@@ -48,6 +48,7 @@
   padding: 0;
   cursor: pointer;
   text-align: left;
+  text-decoration: none;
   font-weight: 800;
   font-size: 18px;
   color: var(--color60);
@@ -65,6 +66,7 @@
 }
 
 .nav-link {
+  display: inline-block;
   background: transparent;
   border: none;
   padding: 0;
@@ -72,6 +74,7 @@
   cursor: pointer;
   font-size: 14px;
   position: relative;
+  text-decoration: none;
   transition: opacity 0.2s;
   border-radius: 4px;
   color: var(--color60);
@@ -114,9 +117,11 @@
 }
 
 .footer-brand {
+  display: inline-block;
   font-weight: 800;
   font-size: 18px;
   color: var(--color10);
+  text-decoration: none;
   margin-bottom: 6px;
 }
 
@@ -143,6 +148,7 @@
   font-size: 14px;
   color: var(--color-text-tertiary);
   font-weight: 400;
+  text-decoration: none;
   transition: opacity 0.15s;
 }
 

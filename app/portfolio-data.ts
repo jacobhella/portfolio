@@ -42,6 +42,14 @@ export interface Contacts {
 
 export type PageName = "Home" | "Work" | "Writing" | "About" | "Contact";
 
+export const PAGE_PATHS: Record<PageName, string> = {
+  Home: "/",
+  Work: "/work",
+  Writing: "/writing",
+  About: "/about",
+  Contact: "/contact",
+};
+
 export const PROJECTS: Project[] = [
   { id: 1, title: "Sleep", category: "Brand identity", year: "2024", color: "#E2DDD6", desc: "A comprehensive brand identity for a sleep wellness startup — identity system, packaging, and digital touchpoints." },
   { id: 2, title: "Air Provision", category: "Design systems", year: "2024", color: "#D6DDE2", desc: "Built a scalable component library and dashboard used across 6 enterprise product teams serving millions of users." },
