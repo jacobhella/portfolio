@@ -50,6 +50,13 @@ export const PAGE_PATHS: Record<PageName, string> = {
   Contact: "/contact",
 };
 
+// next.config.ts sets trailingSlash: true, so usePathname() reports "/work/"
+// rather than "/work" — normalize before comparing against PAGE_PATHS.
+export function isActivePath(pathname: string, path: string): boolean {
+  const normalized = pathname !== "/" && pathname.endsWith("/") ? pathname.slice(0, -1) : pathname;
+  return normalized === path;
+}
+
 export const PROJECTS: Project[] = [
   { id: 1, title: "Sleep", category: "Brand identity", year: "2024", color: "#E2DDD6", desc: "A comprehensive brand identity for a sleep wellness startup — identity system, packaging, and digital touchpoints." },
   { id: 2, title: "Air Provision", category: "Design systems", year: "2024", color: "#D6DDE2", desc: "Built a scalable component library and dashboard used across 6 enterprise product teams serving millions of users." },

@@ -27,6 +27,25 @@ export function EmailIcon({ className }: IconProps) {
   );
 }
 
+export function HamburgerIcon({ className }: IconProps) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
+      <path d="M3 6h18" />
+      <path d="M3 12h18" />
+      <path d="M3 18h18" />
+    </svg>
+  );
+}
+
+export function CloseIcon({ className }: IconProps) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
+      <path d="M5 5 19 19" />
+      <path d="M19 5 5 19" />
+    </svg>
+  );
+}
+
 const SOCIAL_ICONS: Record<string, (props: IconProps) => React.ReactNode> = {
   GitHub: GitHubIcon,
   LinkedIn: LinkedInIcon,

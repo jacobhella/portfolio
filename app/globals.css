@@ -21,20 +21,6 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
-
-    --color60: #E7F6F2;
-    --color30: #A5C9CA;
-    --color10: #2C3333;
-    --color-text: #424874;
-    --colortextGrey: #888;
-
-    --color-ink: #0F0F0D;
-    --color-cream: #F7F5F0;
-    --color-divider: rgba(15, 15, 13, 0.1);
-    --color-text-secondary: #555;
-    --color-text-tertiary: #777;
-    --color-text-muted: #999;
-    --color-text-faint: #bbb;
   }
 }
 

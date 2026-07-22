@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { PageName, PAGE_PATHS, SOCIALS, CONTACTS } from "@/app/portfolio-data";
+import { PageName, PAGE_PATHS, SOCIALS, CONTACTS, isActivePath } from "@/app/portfolio-data";
 import { SocialIcon, EmailIcon } from "@/app/components/icons";
 import "@/app/components/components.css";
 
@@ -41,7 +41,7 @@ export function Footer() {
         <ul className="footer-list">
           {(["Work", "Writing", "About", "Contact"] as PageName[]).map((l) => (
             <li key={l}>
-              <Link href={PAGE_PATHS[l]} className={`footer-link ${pathname === PAGE_PATHS[l] ? "footer-link--active" : ""}`}>
+              <Link href={PAGE_PATHS[l]} className={`footer-link ${isActivePath(pathname, PAGE_PATHS[l]) ? "footer-link--active" : ""}`}>
                 {l}
               </Link>
             </li>
