@@ -1,5 +1,5 @@
 /* Styles only used by components under app/components/. Shared with
-   app/pages/ goes in globals.css; pages-only goes in app/pages/pages.css. */
+   pages goes in globals.css; pages-only goes in app/pages.css. */
 
 .divider-top {
   border-top: 1px solid var(--color-divider);

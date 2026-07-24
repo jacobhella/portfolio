@@ -35,9 +35,7 @@ export interface Social {
 export interface Contacts {
   name: string;
   email: string;
-  phone: string;
   location: string;
-  formattedPhone: string;
 }
 
 export type PageName = "Home" | "Work" | "Writing" | "About" | "Contact";
@@ -65,22 +63,15 @@ export const PROJECTS: Project[] = [
 ];
 
 export const ARTICLES: Article[] = [
-  { id: 1, title: "Design tools every digital product designer should know", readTime: "8 min", date: "Dec 2024" },
-  { id: 2, title: "Designing for user delight", readTime: "5 min", date: "Nov 2024" },
-  { id: 3, title: "Streamlining design workflows with design systems", readTime: "4 min", date: "Oct 2024" },
-  { id: 4, title: "How side projects fuel personal growth for designers", readTime: "3 min", date: "Sep 2024" },
-  { id: 5, title: "Mastering the art of design tools: a guide for product designers", readTime: "3 min", date: "Aug 2024" },
-  { id: 6, title: "The evolution of design thinking: insights and perspectives", readTime: "4 min", date: "Jul 2024" },
-  { id: 7, title: "Building an effective design system", readTime: "4 min", date: "Jun 2024" },
-  { id: 8, title: "Side projects: from passion to portfolio-worthy designs", readTime: "6 min", date: "May 2024" },
+  { id: 1, title: "Master thesis", readTime: "8 min", date: "Dec 2024" },
+  { id: 2, title: "React paper", readTime: "5 min", date: "Nov 2024" },
 ];
 
 export const CLIENTS: string[] = ["Trapeze", "Blitz", "Left Right", "Cup of", "Greeen", "Oval Over", "Eight", "Rounded & Right"];
 
 export const TESTIMONIALS: Testimonial[] = [
-  { quote: "Adrienne exceeded our expectations as a digital product designer. What sets her apart is not only her technical proficiency but also her dedication to understanding the end-users' needs.", name: "Michael Rodriguez", role: "Co-founder · Right Left", initials: "MR", bg: "#C9BDB0" },
-  { quote: "Adrienne's creativity and attention to detail are unparalleled. Working with her on our digital product design was an absolute pleasure. She has a unique ability to translate complex ideas into simple things.", name: "Sarah Johnson", role: "Product Manager · Beam", initials: "SJ", bg: "#B0C9BD" },
-  { quote: "Working with Adrienne was a game-changer for our project. She brought a perfect mix of creativity and practicality, seamlessly integrating our ideas into a design that functioned flawlessly.", name: "Alex Chen", role: "CTO · Cucumber", initials: "AC", bg: "#BDB0C9" },
+  { quote: "XX", name: "John Doe", role: "Co-founder at Company", initials: "MR", bg: "#C9BDB0" },
+  { quote: "YY", name: "Jane Doe", role: "Product Manager at Company", initials: "SJ", bg: "#B0C9BD" },
 ];
 
 export const SERVICES: Service[] = [
@@ -98,7 +89,5 @@ export const SOCIALS: Social[] = [
 export const CONTACTS: Contacts = {
   name: "Jacob Hellström",
   email: "jacob.hellst@gmail.com",
-  phone: "+46761462523",
-  formattedPhone: "+46 (0) 76 146 25 23",
   location: "Umeå, Sweden",
 };

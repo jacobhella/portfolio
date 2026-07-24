@@ -111,8 +111,8 @@ h1 {
   border-radius: 4px;
 }
 
-/* Shared patterns used by BOTH app/pages/ and app/components/. Pages-only
-   goes in app/pages/pages.css; components-only goes in
+/* Shared patterns used by BOTH pages and app/components/. Pages-only
+   goes in app/pages.css; components-only goes in
    app/components/components.css. */
 
 .divider-bottom {
