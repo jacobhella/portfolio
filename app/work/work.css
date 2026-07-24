@@ -3,3 +3,43 @@
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
 }
+
+.work-detail-back {
+  display: inline-block;
+  font-size: 13px;
+  color: var(--color-text-tertiary);
+  text-decoration: none;
+  margin-bottom: 40px;
+}
+
+.work-detail-back:hover {
+  color: var(--color10);
+}
+
+.work-detail-media {
+  border-radius: 16px;
+  height: clamp(240px, 40vw, 440px);
+  margin-bottom: 40px;
+}
+
+.work-detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 24px;
+  margin-bottom: 16px;
+}
+
+.work-detail-year {
+  font-size: 14px;
+  color: var(--color-text-faint);
+  flex-shrink: 0;
+}
+
+.work-detail-desc {
+  font-size: 17px;
+  line-height: 1.8;
+  color: var(--color-text-secondary);
+  max-width: 700px;
+  margin-top: 24px;
+}

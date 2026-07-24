@@ -286,10 +286,13 @@
 }
 
 .work-card {
+  display: block;
   border-radius: 14px;
   overflow: hidden;
   border: 1px solid var(--color-text-faint);
   cursor: pointer;
+  text-decoration: none;
+  color: inherit;
   transition: transform 0.22s ease-out;
 }
 

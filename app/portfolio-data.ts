@@ -1,5 +1,6 @@
 export interface Project {
   id: number;
+  slug: string;
   title: string;
   category: string;
   year: string;
@@ -82,10 +83,10 @@ export function formatExperienceRange(e: Experience): string {
 }
 
 export const PROJECTS: Project[] = [
-  { id: 1, title: "Sleep", category: "Brand identity", year: "2024", color: "#E2DDD6", desc: "A comprehensive brand identity for a sleep wellness startup — identity system, packaging, and digital touchpoints." },
-  { id: 2, title: "Air Provision", category: "Design systems", year: "2024", color: "#D6DDE2", desc: "Built a scalable component library and dashboard used across 6 enterprise product teams serving millions of users." },
-  { id: 3, title: "Parameter", category: "Product design", year: "2023", color: "#DDD6E2", desc: "Led 0→1 product design for an analytics platform — from research and flows to final UI across web and mobile." },
-  { id: 4, title: "Facade", category: "Side projects", year: "2023", color: "#E2DDD6", desc: "A personal side project exploring generative pattern systems and their application to print and digital media." },
+  { id: 1, slug: "sleep", title: "Sleep", category: "Brand identity", year: "2024", color: "#E2DDD6", desc: "A comprehensive brand identity for a sleep wellness startup — identity system, packaging, and digital touchpoints." },
+  { id: 2, slug: "air-provision", title: "Air Provision", category: "Design systems", year: "2024", color: "#D6DDE2", desc: "Built a scalable component library and dashboard used across 6 enterprise product teams serving millions of users." },
+  { id: 3, slug: "parameter", title: "Parameter", category: "Product design", year: "2023", color: "#DDD6E2", desc: "Led 0→1 product design for an analytics platform — from research and flows to final UI across web and mobile." },
+  { id: 4, slug: "facade", title: "Facade", category: "Side projects", year: "2023", color: "#E2DDD6", desc: "A personal side project exploring generative pattern systems and their application to print and digital media." },
 ];
 
 export const ARTICLES: Article[] = [

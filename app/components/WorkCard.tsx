@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Project } from "@/app/portfolio-data";
 import "@/app/components/components.css";
 
@@ -7,7 +8,7 @@ interface WorkCardProps {
 
 export function WorkCard({ project: p }: WorkCardProps) {
   return (
-    <div className="work-card">
+    <Link href={`/work/${p.slug}`} className="work-card">
 
       <div style={{ background: p.color }} className="work-card-media">
         <span className="work-card-category-badge">
@@ -38,6 +39,6 @@ export function WorkCard({ project: p }: WorkCardProps) {
         </span>
       </div>
 
-    </div>
+    </Link>
   );
 }
