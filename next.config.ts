@@ -8,8 +8,4 @@ const nextConfig: NextConfig = {
   trailingSlash: true,
 };
 
-module.exports = {
-  allowedDevOrigins: ['192.168.68.114'],
-}
-
 export default nextConfig;
