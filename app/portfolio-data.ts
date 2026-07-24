@@ -65,6 +65,11 @@ export function isActivePath(pathname: string, path: string): boolean {
   return normalized === path;
 }
 
+// Mirrors next.config.ts's basePath — links to files in public/ aren't
+// rewritten by Next automatically (unlike next/link), so it must be
+// prefixed manually here.
+const BASE_PATH = process.env.NODE_ENV === "production" ? "/portfolio" : "";
+
 const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
 function formatExperienceDate(date: string): string {
@@ -85,7 +90,7 @@ export const PROJECTS: Project[] = [
 
 export const ARTICLES: Article[] = [
   { id: 1, title: "Master's thesis", readTime: "8 min", date: "Dec 2024", url: "https://umu.diva-portal.org/smash/record.jsf?pid=diva2%3A2083162&dswid=5156" },
-  { id: 2, title: "React paper", readTime: "5 min", date: "Nov 2024", url: "#" },
+  { id: 2, title: "React paper", readTime: "5 min", date: "Nov 2024", url: `${BASE_PATH}/A_study_on_React_and_Ionic.pdf` },
 ];
 
 export const TESTIMONIALS: Testimonial[] = [
