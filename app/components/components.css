@@ -224,6 +224,10 @@
 
 /* ImageSlider */
 
+.image-slider-media {
+  display: contents;
+}
+
 .image-slider {
   position: relative;
   border-radius: 16px;
@@ -240,7 +244,7 @@
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
-  border-radius: 14px;
+  border-radius: 6px;
   border: 1px solid var(--color-text-faint);
 }
 
@@ -252,12 +256,16 @@
   text-transform: uppercase;
 }
 
+.image-slider-controls {
+  display: contents;
+}
+
 .image-slider-arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 44px;
-  height: 44px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   background: rgba(15, 15, 13, 0.12);
   display: flex;
@@ -267,6 +275,14 @@
   color: var(--color10);
   transition: background 0.15s;
   cursor: pointer;
+}
+
+.image-slider-arrow--prev {
+  left: 20px;
+}
+
+.image-slider-arrow--next {
+  right: 20px;
 }
 
 .image-slider-dots {
@@ -291,6 +307,37 @@
   background: var(--color10);
 }
 
+@media (max-width: 768px) {
+  .image-slider {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .image-slider-media {
+    display: flex;
+    flex: 1 1 auto;
+    min-height: 0;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .image-slider-controls {
+    display: flex;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .image-slider-arrow {
+    display: none;
+  }
+
+  .image-slider-dots {
+    position: static;
+    transform: none;
+  }
+}
+
 /* SectionLabel */
 
 .section-label {
@@ -307,6 +354,7 @@
 }
 
 .testimonial-quote {
+  font-family: var(--font-inter), sans-serif;
   font-style: italic;
   font-size: 16px;
   line-height: 1.75;
@@ -401,8 +449,7 @@
 
 .work-card-badge-arrow {
   color: var(--color-cream);
-  font-size: 14px;
-  font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+  font-size: 18px;
 }
 
 .work-card-body {
@@ -434,6 +481,7 @@
 }
 
 .work-card-desc {
+  font-family: var(--font-inter), sans-serif;
   font-size: 14px;
   color: var(--color-text-tertiary);
   line-height: 1.625;

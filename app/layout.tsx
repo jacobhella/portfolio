@@ -1,8 +1,16 @@
 import type { Metadata } from "next";
-import { Poppins, Space_Mono } from "next/font/google";
+import { Inter, Poppins, Space_Mono } from "next/font/google";
 import { Nav } from "@/app/components/Nav";
 import { Footer } from "@/app/components/Footer";
 import "./globals.css";
+
+const inter = Inter({
+  variable: "--font-inter",
+  weight: "400",
+  style: ["normal", "italic"],
+  subsets: ["latin"],
+  display: "swap",
+});
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -32,7 +40,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${poppins.variable} ${spaceMono.variable}`}
+      className={`${inter.variable} ${poppins.variable} ${spaceMono.variable}`}
     >
       <body>
         <div className="root-layout">

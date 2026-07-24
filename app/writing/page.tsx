@@ -44,7 +44,7 @@ function ArticleRow({ article: a, last }: ArticleRowProps) {
 
       <div className="writing-row-right">
         <span className="writing-row-time">{a.readTime}</span>
-        <span className="writing-row-arrow">↗</span>
+        <span className="writing-row-arrow">&gt;</span>
       </div>
     </a>
   );

@@ -172,6 +172,7 @@ h1 {
 }
 
 .body-lede {
+  font-family: var(--font-inter), sans-serif;
   font-size: 18px;
   line-height: 1.75;
   color: var(--color-text-secondary);

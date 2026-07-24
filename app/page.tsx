@@ -17,7 +17,7 @@ export default function Page() {
 
           <div className="home-hero-grid">
             <h1 className="home-hero-title">
-              Interactiondesigner and Developer
+              Designer and Developer
             </h1>
 
             <p className="body-lede">
@@ -41,7 +41,7 @@ export default function Page() {
         <div className="layout-container">
           <div className="divider-bottom home-work-header">
             <p className="eyebrow">Selected Work</p>
-            <Link href={PAGE_PATHS.Work} className="home-view-all">View all →</Link>
+            <Link href={PAGE_PATHS.Work} className="home-view-all">View all &gt;</Link>
           </div>
 
           <div className="card-grid">
@@ -65,7 +65,7 @@ export default function Page() {
                 </h2>
 
                 <Link href={PAGE_PATHS.About} className="home-about-link">
-                  Read more about me →
+                  Read more about me &gt;
                 </Link>
               </div>
               <div className="home-about-copy">

@@ -1,4 +1,5 @@
 .about-bio {
+  font-family: var(--font-inter), sans-serif;
   font-size: 17px;
   line-height: 1.8;
   color: #444;
@@ -23,6 +24,7 @@
 
 .experience-row:first-child {
   border-top: none;
+  padding-top: 0;
 }
 
 .experience-row--last {
@@ -55,6 +57,7 @@
 }
 
 .experience-row-description {
+  font-family: var(--font-inter), sans-serif;
   font-size: 15px;
   line-height: 1.7;
   color: var(--color-text-secondary);

@@ -16,7 +16,7 @@ export function WorkCard({ project: p }: WorkCardProps) {
         </span>
 
         <div className="work-card-badge">
-          <span className="work-card-badge-arrow">↗</span>
+          <span className="work-card-badge-arrow">&gt;</span>
         </div>
       </div>
 
