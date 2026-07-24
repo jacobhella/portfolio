@@ -7,13 +7,19 @@ interface WorkCardProps {
 }
 
 export function WorkCard({ project: p }: WorkCardProps) {
+  const firstImage = p.images[0];
+
   return (
     <Link href={`/work/${p.slug}`} className="work-card">
 
       <div style={{ background: p.color }} className="work-card-media">
-        <span className="work-card-category-badge">
-          {p.category}
-        </span>
+        {firstImage?.src ? (
+          <img src={firstImage.src} alt={firstImage.label} className="work-card-image" />
+        ) : (
+          <span className="work-card-category-badge">
+            {p.category}
+          </span>
+        )}
 
         <div className="work-card-badge">
           <span className="work-card-badge-arrow">&gt;</span>

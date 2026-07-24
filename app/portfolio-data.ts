@@ -98,14 +98,21 @@ const PLACEHOLDER_SLIDES: SliderImage[] = [
 ];
 
 export const PROJECTS: Project[] = [
-  { id: 1, slug: "pokemon-starters", title: "Choose Your Starter", category: "Brand identity", year: "2025", color: "#E2DDD6", desc: "A website for choosing your favorite Pokémon starter. Built with standard HTML5 and CSS3.", images: PLACEHOLDER_SLIDES },
-  { id: 2, slug: "tic-tac-toe", title: "Tic Tac Toe", category: "Side projects", year: "2023", color: "#fbd5a8", desc: "A Tic Tac Toe game built with C#, SignalR, ASP.NET, and NoSQL. Following the MVC design pattern. The project was hosted on Azure but is currently unavailable.", images: [
+  { id: 1, slug: "pokemon-starters", title: "Choose Your Starter!", category: "Side project", year: "2025", color: "#cc0000", desc: "A website for choosing your favorite Pokémon starter. Built with standard HTML5 and CSS3.", images: [
+    { src: `${BASE_PATH}/starters/index.png`, label: "Home" },
+    { src: `${BASE_PATH}/starters/bulbasaur.png`, label: "Bulbasaur" },
+    { src: `${BASE_PATH}/starters/charmander.png`, label: "Charmander" },
+    { src: `${BASE_PATH}/starters/squirtle.png`, label: "Squirtle" },
+    { src: `${BASE_PATH}/starters/movesets.png`, label: "Movesets" },
+    { src: `${BASE_PATH}/starters/facts.png`, label: "Facts" },
+  ] },
+  { id: 2, slug: "tic-tac-toe", title: "Tic-Tac-Toe", category: "Side project", year: "2023", color: "#fbd5a8", desc: "A Tic-tac-toe game built with C#, SignalR, ASP.NET, and NoSQL. Following the MVC design pattern. The project was hosted on Azure but is currently unavailable.", images: [
     { src: `${BASE_PATH}/tictactoe/index.png`, label: "Home" },
     { src: `${BASE_PATH}/tictactoe/settings.png`, label: "Settings" },
     { src: `${BASE_PATH}/tictactoe/active_game.png`, label: "Active game" },
   ] },
   { id: 3, slug: "project", title: "Project", category: "Product design", year: "2023", color: "#DDD6E2", desc: "xxx", images: PLACEHOLDER_SLIDES },
-  { id: 4, slug: "other-project", title: "Other Project", category: "Side projects", year: "2023", color: "#E2DDD6", desc: "yyy", images: PLACEHOLDER_SLIDES },
+  { id: 4, slug: "other-project", title: "Other Project", category: "Side project", year: "2023", color: "#E2DDD6", desc: "yyy", images: PLACEHOLDER_SLIDES },
 ];
 
 export const ABOUT_SLIDES: SliderImage[] = [
@@ -115,8 +122,8 @@ export const ABOUT_SLIDES: SliderImage[] = [
 ];
 
 export const ARTICLES: Article[] = [
-  { id: 1, title: "Master's thesis", readTime: "90 min", date: "Dec 2024", url: "https://umu.diva-portal.org/smash/record.jsf?pid=diva2%3A2083162&dswid=5156" },
-  { id: 2, title: "React paper", readTime: "20 min", date: "Nov 2024", url: `${BASE_PATH}/A_study_on_React_and_Ionic.pdf` },
+  { id: 1, title: "Master's thesis", readTime: "90 min", date: "Jun 2026", url: "https://umu.diva-portal.org/smash/record.jsf?pid=diva2%3A2083162&dswid=5156" },
+  { id: 2, title: "React and Ionic paper", readTime: "20 min", date: "Dec 2025", url: `${BASE_PATH}/A_study_on_React_and_Ionic.pdf` },
 ];
 
 export const TESTIMONIALS: Testimonial[] = [
@@ -126,7 +133,7 @@ export const TESTIMONIALS: Testimonial[] = [
 
 export const EXPERIENCES: Experience[] = [
   { id: 1, role: "Intern", company: "Oryx Simulations", startDate: "2026-01", endDate: "2026-06", description: "Wrote my master's thesis." },
-  { id: 2, role: "Junior Developer", company: "Another Co", startDate: "2022-01", endDate: "2024-05", description: "Worked across the product team shipping features end to end." },
+  { id: 2, role: "Some Role", company: "Another Company", startDate: "2022-01", endDate: "2024-05", description: "I worked." },
   { id: 3, role: "Exchange Student in Tokyo", company: "Tokyo Metropolitan University", startDate: "2024-09", endDate: "2025-02", description: "Studied abroad and gained international experience in Japan." },
   { id: 4, role: "Master's in Interactiontechnology and Design", company: "Umeå University", startDate: "2021-07", endDate: "2026-06", description: "Pursuing a master's degree in interaction technology and design." },
   { id: 5, role: "Exchange Student in Phoenix", company: "Arizona School of the Arts", startDate: "2018-07", endDate: "2019-06", description: "Studied abroad and gained international experience in the United States." },

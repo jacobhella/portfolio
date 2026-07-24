@@ -245,7 +245,6 @@
   max-height: 100%;
   object-fit: contain;
   border-radius: 6px;
-  border: 1px solid var(--color-text-faint);
 }
 
 .image-slider-label {
@@ -264,8 +263,8 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 30px;
-  height: 30px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   background: rgba(15, 15, 13, 0.12);
   display: flex;
@@ -411,6 +410,7 @@
 
 .work-card-media {
   height: 240px;
+  padding: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -424,6 +424,13 @@
   color: color-mix(in srgb, var(--color10) 25%, transparent);
   letter-spacing: 0.05em;
   text-transform: uppercase;
+}
+
+.work-card-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 6px;
 }
 
 .work-card-badge {
@@ -496,5 +503,5 @@
   text-transform: uppercase;
   border: 1px solid color-mix(in srgb, var(--foreground) 15%, transparent);
   border-radius: 9999px;
-  padding: 2px 10px;
+  padding: 2px 0px;
 }
