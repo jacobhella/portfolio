@@ -12,7 +12,8 @@
 }
 
 .home-hero-title {
-  font-weight: 800;
+  font-family: var(--font-space-mono), monospace;
+  font-weight: 700;
   letter-spacing: -0.02em;
   color: var(--color10);
   font-size: clamp(38px, 6.5vw, 78px);
@@ -83,7 +84,7 @@
 }
 
 .home-about-heading {
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: -0.02em;
   color: var(--color10);
   font-size: clamp(26px, 3.5vw, 44px);

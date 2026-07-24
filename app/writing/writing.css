@@ -1,11 +1,3 @@
-.writing-title {
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  color: var(--color10);
-  font-size: clamp(44px, 7vw, 80px);
-  line-height: 1;
-}
-
 .writing-row-title {
   font-weight: 700;
   color: var(--color10);

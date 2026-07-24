@@ -8,7 +8,7 @@ export default function Page() {
         <div className="layout-container">
 
           <div className="grid-2col grid-2col--spaced">
-            <h1 className="writing-title">
+            <h1 className="heading-hero">
               Writing
             </h1>
 

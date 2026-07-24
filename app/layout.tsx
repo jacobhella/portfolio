@@ -1,30 +1,20 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Inter, Bricolage_Grotesque } from "next/font/google";
+import { Poppins, Space_Mono } from "next/font/google";
 import { Nav } from "@/app/components/Nav";
 import { Footer } from "@/app/components/Footer";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-const inter = Inter({
-  variable: "--font-inter",
-  weight: "400",
+const poppins = Poppins({
+  variable: "--font-poppins",
+  weight: ["400", "500", "700", "800"],
   style: ["normal", "italic"],
   subsets: ["latin"],
   display: "swap",
 });
 
-const bricolageGrotesque = Bricolage_Grotesque({
-  variable: "--font-bricolage",
-  weight: ["700", "800"],
+const spaceMono = Space_Mono({
+  variable: "--font-space-mono",
+  weight: ["400", "700"],
   subsets: ["latin"],
   display: "swap",
 });
@@ -42,7 +32,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} ${bricolageGrotesque.variable}`}
+      className={`${poppins.variable} ${spaceMono.variable}`}
     >
       <body>
         <div className="root-layout">

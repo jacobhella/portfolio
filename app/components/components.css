@@ -45,7 +45,7 @@
 
 .nav-logo {
   text-decoration: none;
-  font-weight: 800;
+  font-weight: 600;
   font-size: 18px;
   color: var(--color60);
   letter-spacing: -0.025em;
@@ -177,7 +177,7 @@
 
 .footer-brand {
   display: inline-block;
-  font-weight: 800;
+  font-weight: 600;
   font-size: 18px;
   color: var(--color10);
   text-decoration: none;
@@ -346,14 +346,6 @@
 
 /* WorkCard */
 
-.work-card-category-badge,
-.work-card-title,
-.work-card-year,
-.work-card-desc,
-.work-card-tag {
-  font-family: var(--font-inter), sans-serif;
-}
-
 .work-card {
   display: block;
   border-radius: 14px;
@@ -427,6 +419,7 @@
 }
 
 .work-card-title {
+  font-family: var(--font-space-mono), monospace;
   font-size: 18px;
   font-weight: 700;
   color: var(--color10);

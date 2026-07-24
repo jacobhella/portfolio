@@ -17,7 +17,7 @@ export default function Page() {
 
           <div className="home-hero-grid">
             <h1 className="home-hero-title">
-              Interaction designer and developer
+              Interactiondesigner and Developer
             </h1>
 
             <p className="body-lede">
