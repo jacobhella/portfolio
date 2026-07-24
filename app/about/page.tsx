@@ -12,11 +12,11 @@ export default function Page() {
       <section className="section-padding section-hero">
         <div className="layout-container">
           <div className="grid-2col">
-            <h1 className="heading-hero heading-hero--span">A bit about Jacob</h1>
+            <h1 className="heading-hero heading-hero--span">A bit about me</h1>
             <div className="about-bio">
-              <p>I'm Adrienne, a freelance product designer. I like blending creativity with practicality to make ideas come to life. I studied Industrial Design and have worked in many different industries. I make simple and intuitive designs that exceed expectations.</p>
-              <p>I enjoy collaborating with clients, treating them as creative partners. Together, we work from the idea stage to making it real.</p>
-              <p>In my work, I keep up with new trends and technologies. I create designs that are modern and timeless. I believe in being honest, clear, and making designs that are good for the environment.</p>
+              <p>I'm Jacob, a... </p>
+              <p>I enjoy working with...</p>
+              <p>In my work, I keep up with new trends and technologies...</p>
             </div>
             <div />
           </div>

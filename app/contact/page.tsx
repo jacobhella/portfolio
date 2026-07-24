@@ -12,7 +12,7 @@ export default function Page() {
             <h1 className="heading-hero heading-hero--span">Get in touch</h1>
 
             <p className="body-lede">
-              Have a project in mind? I would love to hear more about it. Drop me an email or book a call to talk through your needs, 1 to 1.
+              Feel free to reach out via email or connect with me on social media. I look forward to hearing from you!
             </p>
 
             <div className="contact-link-stack">

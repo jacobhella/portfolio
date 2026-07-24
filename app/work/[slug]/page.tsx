@@ -20,7 +20,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
         <Link href={PAGE_PATHS.Work} className="work-detail-back">← Back to work</Link>
 
         <div className="work-detail-slider-section">
-          <ImageSlider slides={project.images} />
+          <ImageSlider slides={project.images} background={project.color} />
         </div>
 
         <div className="work-detail-header">

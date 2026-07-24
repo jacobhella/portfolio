@@ -6,14 +6,15 @@ import "@/app/components/components.css";
 
 interface ImageSliderProps {
   slides: SliderImage[];
+  background?: string; // shown behind (padded) images; falls back to each slide's own color
 }
 
-export function ImageSlider({ slides }: ImageSliderProps) {
+export function ImageSlider({ slides, background }: ImageSliderProps) {
   const [index, setIndex] = useState(0);
   const slide = slides[index];
 
   return (
-    <div className="image-slider" style={slide.src ? undefined : { background: slide.color }}>
+    <div className="image-slider" style={{ background: background ?? slide.color }}>
       {slide.src ? (
         <img src={slide.src} alt={slide.label} className="image-slider-img" />
       ) : (

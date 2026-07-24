@@ -69,9 +69,9 @@ export default function Page() {
                 </Link>
               </div>
               <div className="home-about-copy">
-                <p>I'm based in London, working with founders and product teams across Europe and the US. My practice sits at the intersection of research, systems thinking, and craft.</p>
+                <p>I'm from Umeå, Sweden...</p>
 
-                <p>Before going independent, I led design at two VC-backed startups and a consultancy. I believe the best products are the ones you don't have to think about.</p>
+                <p>I have a passion for...</p>
               </div>
             </div>
           </div>

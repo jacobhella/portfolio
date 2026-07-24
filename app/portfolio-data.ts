@@ -1,6 +1,6 @@
 export interface SliderImage {
   src?: string; // path to an image in public/; omitted to show a color placeholder
-  color: string; // placeholder background shown while src is unset
+  color?: string; // placeholder background shown while src is unset
   label: string;
 }
 
@@ -98,10 +98,14 @@ const PLACEHOLDER_SLIDES: SliderImage[] = [
 ];
 
 export const PROJECTS: Project[] = [
-  { id: 1, slug: "sleep", title: "Sleep", category: "Brand identity", year: "2024", color: "#E2DDD6", desc: "A comprehensive brand identity for a sleep wellness startup — identity system, packaging, and digital touchpoints.", images: PLACEHOLDER_SLIDES },
-  { id: 2, slug: "air-provision", title: "Air Provision", category: "Design systems", year: "2024", color: "#D6DDE2", desc: "Built a scalable component library and dashboard used across 6 enterprise product teams serving millions of users.", images: PLACEHOLDER_SLIDES },
-  { id: 3, slug: "parameter", title: "Parameter", category: "Product design", year: "2023", color: "#DDD6E2", desc: "Led 0→1 product design for an analytics platform — from research and flows to final UI across web and mobile.", images: PLACEHOLDER_SLIDES },
-  { id: 4, slug: "facade", title: "Facade", category: "Side projects", year: "2023", color: "#E2DDD6", desc: "A personal side project exploring generative pattern systems and their application to print and digital media.", images: PLACEHOLDER_SLIDES },
+  { id: 1, slug: "pokemon-starters", title: "Choose Your Starter", category: "Brand identity", year: "2025", color: "#E2DDD6", desc: "A website for choosing your favorite Pokémon starter. Built with standard HTML5 and CSS3.", images: PLACEHOLDER_SLIDES },
+  { id: 2, slug: "tic-tac-toe", title: "Tic Tac Toe", category: "Side projects", year: "2023", color: "#fbd5a8", desc: "A Tic Tac Toe game built with C#, SignalR, ASP.NET, and NoSQL. Following the MVC design pattern. The project was hosted on Azure but is currently unavailable.", images: [
+    { src: `${BASE_PATH}/tictactoe/index.png`, label: "Home" },
+    { src: `${BASE_PATH}/tictactoe/settings.png`, label: "Settings" },
+    { src: `${BASE_PATH}/tictactoe/active_game.png`, label: "Active game" },
+  ] },
+  { id: 3, slug: "project", title: "Project", category: "Product design", year: "2023", color: "#DDD6E2", desc: "xxx", images: PLACEHOLDER_SLIDES },
+  { id: 4, slug: "other-project", title: "Other Project", category: "Side projects", year: "2023", color: "#E2DDD6", desc: "yyy", images: PLACEHOLDER_SLIDES },
 ];
 
 export const ABOUT_SLIDES: SliderImage[] = [
@@ -111,8 +115,8 @@ export const ABOUT_SLIDES: SliderImage[] = [
 ];
 
 export const ARTICLES: Article[] = [
-  { id: 1, title: "Master's thesis", readTime: "8 min", date: "Dec 2024", url: "https://umu.diva-portal.org/smash/record.jsf?pid=diva2%3A2083162&dswid=5156" },
-  { id: 2, title: "React paper", readTime: "5 min", date: "Nov 2024", url: `${BASE_PATH}/A_study_on_React_and_Ionic.pdf` },
+  { id: 1, title: "Master's thesis", readTime: "40 min", date: "Dec 2024", url: "https://umu.diva-portal.org/smash/record.jsf?pid=diva2%3A2083162&dswid=5156" },
+  { id: 2, title: "React paper", readTime: "10 min", date: "Nov 2024", url: `${BASE_PATH}/A_study_on_React_and_Ionic.pdf` },
 ];
 
 export const TESTIMONIALS: Testimonial[] = [
