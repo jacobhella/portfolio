@@ -16,9 +16,7 @@
   color: var(--color10);
 }
 
-.work-detail-media {
-  border-radius: 16px;
-  height: clamp(240px, 40vw, 440px);
+.work-detail-slider-section {
   margin-bottom: 40px;
 }
 

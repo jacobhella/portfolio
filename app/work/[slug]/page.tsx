@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { PAGE_PATHS, PROJECTS } from "@/app/portfolio-data";
+import { ImageSlider } from "@/app/components/ImageSlider";
 import "@/app/work/work.css";
 
 export function generateStaticParams() {
@@ -18,7 +19,9 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
       <div className="layout-container">
         <Link href={PAGE_PATHS.Work} className="work-detail-back">← Back to work</Link>
 
-        <div style={{ background: project.color }} className="work-detail-media" />
+        <div className="work-detail-slider-section">
+          <ImageSlider slides={project.images} />
+        </div>
 
         <div className="work-detail-header">
           <h1 className="heading-hero">{project.title}</h1>

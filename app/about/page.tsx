@@ -1,17 +1,11 @@
-"use client";
-
-import { useState } from "react";
-import { EXPERIENCES, Experience, TESTIMONIALS, formatExperienceRange } from "@/app/portfolio-data";
+import { ABOUT_SLIDES, EXPERIENCES, Experience, TESTIMONIALS, formatExperienceRange } from "@/app/portfolio-data";
 import { SectionLabel } from "@/app/components/SectionLabel";
 import { TestimonialCard } from "@/app/components/TestimonialCard";
+import { ImageSlider } from "@/app/components/ImageSlider";
 import "@/app/globals.css";
 import "@/app/about/about.css";
 
 export default function Page() {
-  const [slideIndex, setSlideIndex] = useState<number>(0);
-  const SLIDE_COLORS: string[] = ["#D9D4CB", "#C8D3CF", "#D0CBD9"];
-  const SLIDE_LABELS: string[] = ["Studio", "Process", "Field"];
-
   return (
     <>
       {/* Hero */}
@@ -32,34 +26,7 @@ export default function Page() {
       {/* Image slider */}
       <section className="about-slider-section">
         <div className="layout-container">
-          <div className="about-slider" style={{ background: SLIDE_COLORS[slideIndex] }}>
-            <span className="about-slider-label">{SLIDE_LABELS[slideIndex]}</span>
-            {/* Arrows */}
-            {([
-              { dir: -1, label: "←" },
-              { dir: 1, label: "→" },
-            ] as const).map(({ dir, label }) => (
-              <button
-                key={dir}
-                onClick={() => setSlideIndex((slideIndex + dir + 3) % 3)}
-                className="btn-reset about-slider-arrow"
-                style={{ [dir === -1 ? "left" : "right"]: 20 }}
-                aria-label={dir === -1 ? "Previous" : "Next"}
-              >
-                {label}
-              </button>
-            ))}
-            {/* Dots */}
-            <div className="about-slider-dots">
-              {[0, 1, 2].map((i) => (
-                <button
-                  key={i}
-                  onClick={() => setSlideIndex(i)}
-                  className={`btn-reset about-slider-dot ${i === slideIndex ? "about-slider-dot--active" : ""}`}
-                />
-              ))}
-            </div>
-          </div>
+          <ImageSlider slides={ABOUT_SLIDES} />
         </div>
       </section>
 
