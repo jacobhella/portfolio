@@ -1,6 +1,6 @@
 import { CONTACTS, SOCIALS} from "@/app/portfolio-data";
 import { SocialIcon, EmailIcon } from "@/app/components/icons";
-import "@/app/pages.css";
+import "@/app/contact/contact.css";
 
 export default function Page() {
   return (

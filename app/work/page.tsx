@@ -1,6 +1,6 @@
 import { PROJECTS } from "@/app/portfolio-data";
 import { WorkCard } from "@/app/components/WorkCard";
-import "@/app/pages.css";
+import "@/app/work/work.css";
 
 export default function Page() {
   return (

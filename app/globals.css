@@ -112,8 +112,8 @@ h1 {
 }
 
 /* Shared patterns used by BOTH pages and app/components/. Pages-only
-   goes in app/pages.css; components-only goes in
-   app/components/components.css. */
+   goes in each page's own CSS file (e.g. app/about/about.css);
+   components-only goes in app/components/components.css. */
 
 .divider-bottom {
   border-bottom: 1px solid var(--color-divider);
@@ -150,4 +150,50 @@ h1 {
   width: 1em;
   height: 1em;
   flex-shrink: 0;
+}
+
+/* Shared page patterns — used by two or more pages under app/.
+   Patterns used by only a single page live in that page's own CSS file. */
+
+.section-hero {
+  padding-top: 140px;
+}
+
+.heading-hero {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--color10);
+  font-size: clamp(44px, 7vw, 80px);
+  line-height: 1.0;
+}
+
+.heading-hero--span {
+  grid-column: 1 / -1;
+  max-width: 700px;
+}
+
+.body-lede {
+  font-size: 18px;
+  line-height: 1.75;
+  color: var(--color-text-secondary);
+}
+
+.body-lede--end {
+  align-self: end;
+}
+
+.grid-2col {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 32px 80px;
+}
+
+.grid-2col--spaced {
+  margin-bottom: 56px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
 }

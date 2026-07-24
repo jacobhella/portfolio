@@ -1,0 +1,9 @@
+.grid-2col--top {
+  align-items: start;
+}
+
+.contact-link-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

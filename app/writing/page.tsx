@@ -1,5 +1,5 @@
 import { ARTICLES, Article } from "@/app/portfolio-data";
-import "@/app/pages.css";
+import "@/app/writing/writing.css";
 
 export default function Page() {
   return (

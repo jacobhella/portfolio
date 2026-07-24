@@ -1,0 +1,112 @@
+.home-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  gap: 40px 60px;
+  align-items: start;
+}
+
+@media (max-width: 768px) {
+  .home-hero-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.home-hero-title {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--color10);
+  font-size: clamp(38px, 6.5vw, 78px);
+  line-height: 1.05;
+  grid-column: 1 / -1;
+  max-width: 900px;
+}
+
+.home-hero-eyebrow {
+  margin-bottom: 28px;
+}
+
+.home-services > div:last-child {
+  border-bottom: 1px solid var(--color-divider);
+}
+
+.home-services-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 0;
+  border-top: 1px solid var(--color-divider);
+}
+
+.home-service-num {
+  font-size: 11px;
+  color: var(--color-text-faint);
+  letter-spacing: 0.05em;
+  min-width: 24px;
+}
+
+.home-service-label {
+  font-weight: 700;
+  color: var(--color10);
+  font-size: 15px;
+}
+
+.home-work-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 32px;
+  padding-bottom: 14px;
+}
+
+.home-view-all {
+  font-size: 13px;
+  color: var(--color10);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.home-about-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 60px;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .home-about-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.home-about-eyebrow {
+  margin-bottom: 24px;
+}
+
+.home-about-heading {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--color10);
+  font-size: clamp(26px, 3.5vw, 44px);
+  line-height: 1.1;
+  margin-bottom: 28px;
+}
+
+.home-about-link {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--color10);
+  text-decoration: none;
+  border-bottom: 1px solid color-mix(in srgb, var(--color-ink) 30%, transparent);
+  padding-bottom: 3px;
+}
+
+.home-about-copy {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--color-text-secondary);
+}
+
+.home-about-copy p:first-child {
+  margin-bottom: 20px;
+}

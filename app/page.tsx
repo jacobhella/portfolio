@@ -3,7 +3,7 @@ import { PROJECTS, PAGE_PATHS, SERVICES, TESTIMONIALS } from "@/app/portfolio-da
 import { WorkCard } from "@/app/components/WorkCard";
 import { TestimonialCard } from "@/app/components/TestimonialCard";
 import { SectionLabel } from "@/app/components/SectionLabel";
-import "@/app/pages.css";
+import "@/app/home.css";
 
 export default function Page() {
   return (

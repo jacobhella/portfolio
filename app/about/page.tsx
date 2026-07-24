@@ -5,7 +5,7 @@ import { EXPERIENCES, Experience, TESTIMONIALS, formatExperienceRange } from "@/
 import { SectionLabel } from "@/app/components/SectionLabel";
 import { TestimonialCard } from "@/app/components/TestimonialCard";
 import "@/app/globals.css";
-import "@/app/pages.css";
+import "@/app/about/about.css";
 
 export default function Page() {
   const [slideIndex, setSlideIndex] = useState<number>(0);
