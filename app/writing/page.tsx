@@ -36,7 +36,7 @@ interface ArticleRowProps {
 
 function ArticleRow({ article: a, last }: ArticleRowProps) {
   return (
-    <a href="#" className={`writing-row ${last ? "writing-row--last" : ""}`}>
+    <a href={a.url} target="_blank" rel="noopener noreferrer" className={`writing-row ${last ? "writing-row--last" : ""}`}>
       <div className="writing-row-left">
         <span className="writing-row-date">{a.date}</span>
         <h3 className="writing-row-title">{a.title}</h3>

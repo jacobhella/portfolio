@@ -12,6 +12,7 @@ export interface Article {
   title: string;
   readTime: string;
   date: string;
+  url: string;
 }
 
 export interface Testimonial {
@@ -20,6 +21,15 @@ export interface Testimonial {
   role: string;
   initials: string;
   bg: string;
+}
+
+export interface Experience {
+  id: number;
+  role: string;
+  company: string;
+  startDate: string; // "YYYY-MM"
+  endDate: string | null; // "YYYY-MM", null = present
+  description: string;
 }
 
 export interface Service {
@@ -55,6 +65,17 @@ export function isActivePath(pathname: string, path: string): boolean {
   return normalized === path;
 }
 
+const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+function formatExperienceDate(date: string): string {
+  const [year, month] = date.split("-").map(Number);
+  return `${MONTHS[month - 1]} ${year}`;
+}
+
+export function formatExperienceRange(e: Experience): string {
+  return `${formatExperienceDate(e.startDate)} – ${e.endDate ? formatExperienceDate(e.endDate) : "Present"}`;
+}
+
 export const PROJECTS: Project[] = [
   { id: 1, title: "Sleep", category: "Brand identity", year: "2024", color: "#E2DDD6", desc: "A comprehensive brand identity for a sleep wellness startup — identity system, packaging, and digital touchpoints." },
   { id: 2, title: "Air Provision", category: "Design systems", year: "2024", color: "#D6DDE2", desc: "Built a scalable component library and dashboard used across 6 enterprise product teams serving millions of users." },
@@ -63,16 +84,23 @@ export const PROJECTS: Project[] = [
 ];
 
 export const ARTICLES: Article[] = [
-  { id: 1, title: "Master thesis", readTime: "8 min", date: "Dec 2024" },
-  { id: 2, title: "React paper", readTime: "5 min", date: "Nov 2024" },
+  { id: 1, title: "Master's thesis", readTime: "8 min", date: "Dec 2024", url: "https://umu.diva-portal.org/smash/record.jsf?pid=diva2%3A2083162&dswid=5156" },
+  { id: 2, title: "React paper", readTime: "5 min", date: "Nov 2024", url: "#" },
 ];
-
-export const CLIENTS: string[] = ["Trapeze", "Blitz", "Left Right", "Cup of", "Greeen", "Oval Over", "Eight", "Rounded & Right"];
 
 export const TESTIMONIALS: Testimonial[] = [
   { quote: "XX", name: "John Doe", role: "Co-founder at Company", initials: "MR", bg: "#C9BDB0" },
   { quote: "YY", name: "Jane Doe", role: "Product Manager at Company", initials: "SJ", bg: "#B0C9BD" },
 ];
+
+export const EXPERIENCES: Experience[] = [
+  { id: 1, role: "Frontend Developer", company: "Example Co", startDate: "2024-06", endDate: null, description: "Building and maintaining the design system and marketing site." },
+  { id: 2, role: "Junior Developer", company: "Another Co", startDate: "2022-01", endDate: "2024-05", description: "Worked across the product team shipping features end to end." },
+].sort((a, b) => {
+  const aEnd = a.endDate ?? "9999-12";
+  const bEnd = b.endDate ?? "9999-12";
+  return bEnd.localeCompare(aEnd) || b.startDate.localeCompare(a.startDate);
+});
 
 export const SERVICES: Service[] = [
   { num: "01", label: "Product Designer" },

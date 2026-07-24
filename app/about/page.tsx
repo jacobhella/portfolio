@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { CLIENTS, TESTIMONIALS} from "@/app/portfolio-data";
+import { EXPERIENCES, Experience, TESTIMONIALS, formatExperienceRange } from "@/app/portfolio-data";
 import { SectionLabel } from "@/app/components/SectionLabel";
 import { TestimonialCard } from "@/app/components/TestimonialCard";
 import "@/app/globals.css";
@@ -63,18 +63,14 @@ export default function Page() {
         </div>
       </section>
 
-      {/* Clients */}
+      {/* Experience */}
       <section className="section-padding">
         <div className="layout-container">
-          <div className="about-clients-layout">
-            <h2 className="heading-section">Clients</h2>
-            <div className="about-clients-grid">
-              {CLIENTS.map((c) => (
-                <div key={c}>
-                  {c}
-                </div>
-              ))}
-            </div>
+          <SectionLabel>Experience</SectionLabel>
+          <div>
+            {EXPERIENCES.map((e, i) => (
+              <ExperienceRow key={e.id} experience={e} last={i === EXPERIENCES.length - 1} />
+            ))}
           </div>
         </div>
       </section>
@@ -89,5 +85,25 @@ export default function Page() {
         </div>
       </section>
     </>
+  );
+}
+
+interface ExperienceRowProps {
+  experience: Experience;
+  last: boolean;
+}
+
+function ExperienceRow({ experience: e, last }: ExperienceRowProps) {
+  return (
+    <div className={`experience-row ${last ? "experience-row--last" : ""}`}>
+      <div className="experience-row-header">
+        <div>
+          <h3 className="experience-row-role">{e.role}</h3>
+          <p className="experience-row-company">{e.company}</p>
+        </div>
+        <span className="experience-row-dates">{formatExperienceRange(e)}</span>
+      </div>
+      <p className="experience-row-description">{e.description}</p>
+    </div>
   );
 }

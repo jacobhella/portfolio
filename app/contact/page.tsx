@@ -20,19 +20,6 @@ export default function Page() {
                 <EmailIcon className="social-icon" />
                 {CONTACTS.email}
               </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Social links */}
-      <section className="section-padding">
-        <div className="layout-container">
-          <div className="grid-2col grid-2col--top">
-
-            <h2 className="heading-section">Social</h2>
-
-            <div className="contact-social-stack">
               {SOCIALS.map((s) => (
                 <a key={s.name} href={s.url} target="_blank" rel="noopener noreferrer" className="link-lg social-link">
                   <SocialIcon name={s.name} className="social-icon" />
