@@ -111,8 +111,13 @@ export const PROJECTS: Project[] = [
     { src: `${BASE_PATH}/tictactoe/settings.png`, label: "Settings" },
     { src: `${BASE_PATH}/tictactoe/active_game.png`, label: "Active game" },
   ] },
-  { id: 3, slug: "project", title: "Project", category: "Product design", year: "2023", color: "#DDD6E2", desc: "xxx", images: PLACEHOLDER_SLIDES },
-  { id: 4, slug: "other-project", title: "Other Project", category: "Side project", year: "2023", color: "#E2DDD6", desc: "yyy", images: PLACEHOLDER_SLIDES },
+  { id: 3, slug: "lithium", title: "Lithium", category: "Product design", year: "2023", color: "#3d393c", desc: "An app for charging electric vehicles designed in Figma. Designed at Umeå University Design campus.", images: [
+    { src: `${BASE_PATH}/lithium/profile.png`, label: "Profile" },
+    { src: `${BASE_PATH}/lithium/map.png`, label: "Map" },
+    { src: `${BASE_PATH}/lithium/driving.png`, label: "Driving" },
+    { src: `${BASE_PATH}/lithium/charging.png`, label: "Charging" },
+    { src: `${BASE_PATH}/lithium/receipt.png`, label: "Receipt" },
+  ] },
 ];
 
 export const ABOUT_SLIDES: SliderImage[] = [
@@ -122,8 +127,8 @@ export const ABOUT_SLIDES: SliderImage[] = [
 ];
 
 export const ARTICLES: Article[] = [
-  { id: 1, title: "Master's thesis", readTime: "90 min", date: "Jun 2026", url: "https://umu.diva-portal.org/smash/record.jsf?pid=diva2%3A2083162&dswid=5156" },
-  { id: 2, title: "React and Ionic paper", readTime: "20 min", date: "Dec 2025", url: `${BASE_PATH}/A_study_on_React_and_Ionic.pdf` },
+  { id: 1, title: "Master's Thesis: Intention Recognition in Training", readTime: "90 min", date: "Jun 2026", url: "https://umu.diva-portal.org/smash/record.jsf?pid=diva2%3A2083162&dswid=5156" },
+  { id: 2, title: "Student Conference: Comparing React Native and Ionic Frameworks", readTime: "20 min", date: "Dec 2025", url: `${BASE_PATH}/Comparing_React_Native_and_Ionic.pdf` },
 ];
 
 export const TESTIMONIALS: Testimonial[] = [
