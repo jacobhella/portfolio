@@ -2,11 +2,11 @@
 
 import { useEffect, useRef, useState } from "react";
 import { motion, PanInfo, useMotionValue, useTransform } from "motion/react";
-import { SliderImage } from "@/app/portfolio-data";
+import { CarouselImage } from "@/app/portfolio-data";
 import "@/app/components/components.css";
 
 interface CarouselProps {
-  slides: SliderImage[];
+  slides: CarouselImage[];
   background?: string; // shown behind (padded) images; falls back to each slide's own color
   autoplay?: boolean;
   autoplayDelay?: number;
@@ -21,7 +21,7 @@ const WHEEL_THRESHOLD = 10;
 const WHEEL_COOLDOWN_MS = 500;
 
 interface SlideItemProps {
-  slide: SliderImage;
+  slide: CarouselImage;
   index: number;
   itemWidth: number;
   x: any;

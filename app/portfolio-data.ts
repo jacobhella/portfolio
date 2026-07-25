@@ -1,4 +1,4 @@
-export interface SliderImage {
+export interface CarouselImage {
   src?: string; // path to an image in public/; omitted to show a color placeholder
   color?: string; // placeholder background shown while src is unset
   label: string;
@@ -12,7 +12,7 @@ export interface Project {
   year: string;
   color: string;
   desc: string;
-  images: SliderImage[];
+  images: CarouselImage[];
 }
 
 export interface Article {
@@ -91,7 +91,7 @@ export function formatExperienceRange(e: Experience): string {
 
 // Generic placeholder slides shown until real project photos are added to
 // public/ — swap in a `src` per slide and these colors are ignored.
-const PLACEHOLDER_SLIDES: SliderImage[] = [
+const PLACEHOLDER_SLIDES: CarouselImage[] = [
   { color: "#E2DDD6", label: "Overview" },
   { color: "#D6DDE2", label: "Detail" },
   { color: "#DDD6E2", label: "Process" },
@@ -132,10 +132,9 @@ export const PROJECTS: Project[] = [
   ] },
 ];
 
-export const ABOUT_SLIDES: SliderImage[] = [
-  { color: "#D9D4CB", label: "X" },
-  { color: "#C8D3CF", label: "Y" },
-  { color: "#D0CBD9", label: "Z" },
+export const ABOUT_SLIDES: CarouselImage[] = [
+  { src: `${BASE_PATH}/photography/climbing.jpeg`, color: "#c9bdb0", label: "Climbing" },
+  { src: `${BASE_PATH}/photography/skiing.jpeg`, color: "#c9bdb0", label: "Skiing" },
 ];
 
 export const ARTICLES: Article[] = [
