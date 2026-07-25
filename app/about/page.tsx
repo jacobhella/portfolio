@@ -1,7 +1,7 @@
 import { ABOUT_SLIDES, EXPERIENCES, Experience, TESTIMONIALS, formatExperienceRange } from "@/app/portfolio-data";
 import { SectionLabel } from "@/app/components/SectionLabel";
 import { TestimonialCard } from "@/app/components/TestimonialCard";
-import { ImageSlider } from "@/app/components/ImageSlider";
+import { Carousel } from "@/app/components/Carousel";
 import "@/app/globals.css";
 import "@/app/about/about.css";
 
@@ -26,7 +26,7 @@ export default function Page() {
       {/* Image slider */}
       <section className="about-slider-section">
         <div className="layout-container">
-          <ImageSlider slides={ABOUT_SLIDES} />
+          <Carousel slides={ABOUT_SLIDES} />
         </div>
       </section>
 

@@ -58,8 +58,6 @@ export default function Page() {
           <div className="panel-accent">
             <div className="home-about-grid">
               <div>
-                <p className="eyebrow home-about-eyebrow">About</p>
-
                 <h2 className="home-about-heading">
                   Design that does something — not just something that looks good.
                 </h2>

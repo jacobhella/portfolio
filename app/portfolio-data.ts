@@ -98,7 +98,7 @@ const PLACEHOLDER_SLIDES: SliderImage[] = [
 ];
 
 export const PROJECTS: Project[] = [
-  { id: 1, slug: "pokemon-starters", title: "Choose Your Starter!", category: "Side project", year: "2025", color: "#cc0000", desc: "A website for choosing your favorite Pokémon starter. Built with standard HTML5 and CSS3.", images: [
+  { id: 1, slug: "pokemon-starters", title: "Choose Your Starter!", category: "Side project", year: "2025", color: "#b3b3c1", desc: "A website for choosing your favorite Pokémon starter. Built with standard HTML5 and CSS3 and more.", images: [
     { src: `${BASE_PATH}/starters/index.png`, label: "Home" },
     { src: `${BASE_PATH}/starters/bulbasaur.png`, label: "Bulbasaur" },
     { src: `${BASE_PATH}/starters/charmander.png`, label: "Charmander" },
@@ -106,7 +106,7 @@ export const PROJECTS: Project[] = [
     { src: `${BASE_PATH}/starters/movesets.png`, label: "Movesets" },
     { src: `${BASE_PATH}/starters/facts.png`, label: "Facts" },
   ] },
-  { id: 2, slug: "tic-tac-toe", title: "Tic-Tac-Toe", category: "Side project", year: "2023", color: "#fbd5a8", desc: "A Tic-tac-toe game built with C#, SignalR, ASP.NET, and NoSQL. Following the MVC design pattern. The project was hosted on Azure but is currently unavailable.", images: [
+  { id: 2, slug: "tic-tac-toe", title: "Tic-Tac-Toe", category: "Side project", year: "2023", color: "#fcead7", desc: "A Tic-tac-toe game built with C#, SignalR, ASP.NET, and NoSQL. Following the MVC design pattern. The project was hosted on Azure but is currently unavailable.", images: [
     { src: `${BASE_PATH}/tictactoe/index.png`, label: "Home" },
     { src: `${BASE_PATH}/tictactoe/settings.png`, label: "Settings" },
     { src: `${BASE_PATH}/tictactoe/active_game.png`, label: "Active game" },

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { PAGE_PATHS, PROJECTS } from "@/app/portfolio-data";
-import { ImageSlider } from "@/app/components/ImageSlider";
+import { Carousel } from "@/app/components/Carousel";
 import "@/app/work/work.css";
 
 export function generateStaticParams() {
@@ -20,7 +20,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
         <Link href={PAGE_PATHS.Work} className="work-detail-back">&lt; Back to work</Link>
 
         <div className="work-detail-slider-section">
-          <ImageSlider slides={project.images} background={project.color} />
+          <Carousel slides={project.images} background={project.color} />
         </div>
 
         <div className="work-detail-header">
