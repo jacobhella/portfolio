@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { motion, PanInfo, useMotionValue, useTransform } from "motion/react";
+import { animate, motion, PanInfo, useMotionValue, useTransform } from "motion/react";
 import { CarouselImage } from "@/app/portfolio-data";
 import "@/app/components/components.css";
 
@@ -15,7 +15,7 @@ interface CarouselProps {
 
 const DRAG_BUFFER = 40;
 const VELOCITY_THRESHOLD = 500;
-const SPRING_OPTIONS = { type: "spring" as const, stiffness: 300, damping: 30 };
+const SPRING_OPTIONS = { type: "spring" as const, stiffness: 420, damping: 40 };
 const TILT_DEGREES = 30;
 const WHEEL_THRESHOLD = 10;
 const WHEEL_COOLDOWN_MS = 500;
@@ -29,12 +29,12 @@ interface SlideItemProps {
 
 function SlideItem({ slide, index, itemWidth, x }: SlideItemProps) {
   const range = [-(index + 1) * itemWidth, -index * itemWidth, -(index - 1) * itemWidth];
-  const rotateY = useTransform(x, range, [TILT_DEGREES, 0, -TILT_DEGREES], { clamp: false });
+  const rotateY = useTransform(x, range, [TILT_DEGREES, 0, -TILT_DEGREES]);
 
   return (
-    <motion.div className="carousel-item" style={{ width: itemWidth, rotateY }} transition={SPRING_OPTIONS}>
+    <motion.div className="carousel-item" style={{ width: itemWidth, rotateY }}>
       {slide.src ? (
-        <img src={slide.src} alt={slide.label} className="carousel-img" />
+        <img src={slide.src} alt={slide.label} className="carousel-img" draggable={false} />
       ) : (
         <span className="carousel-label">{slide.label}</span>
       )}
@@ -56,8 +56,18 @@ export function Carousel({ slides, background, autoplay = false, autoplayDelay =
   const trackRef = useRef<HTMLDivElement>(null);
   const wheelLocked = useRef(false);
   const isAnimatingRef = useRef(false);
+  const positionRef = useRef(0);
+  const itemWidthRef = useRef(0);
 
   const clamp = (p: number) => Math.max(0, Math.min(p, lastIndex));
+
+  useEffect(() => {
+    positionRef.current = position;
+  }, [position]);
+
+  useEffect(() => {
+    itemWidthRef.current = itemWidth;
+  }, [itemWidth]);
 
   useEffect(() => {
     const el = trackRef.current;
@@ -68,15 +78,37 @@ export function Carousel({ slides, background, autoplay = false, autoplayDelay =
     return () => observer.disconnect();
   }, []);
 
+  // Re-align x to the current slide whenever the track's width changes (e.g. window
+  // resize). No animation here — it's a layout correction, not a slide change.
+  useEffect(() => {
+    x.set(-(positionRef.current * itemWidth));
+  }, [itemWidth, x]);
+
+  // Drives x imperatively instead of through a declarative `animate` prop.
+  // Handing the target to framer-motion only via React state left a one-render
+  // gap right after a drag release where it would still animate toward the
+  // stale (pre-drag) target before snapping to the real one.
+  const goTo = (target: number) => {
+    const next = clamp(target);
+    setPosition(next);
+    isAnimatingRef.current = true;
+    setIsAnimating(true);
+    animate(x, -(next * itemWidthRef.current), SPRING_OPTIONS).then(() => {
+      isAnimatingRef.current = false;
+      setIsAnimating(false);
+    });
+  };
+
   useEffect(() => {
     if (!autoplay || !hasMultiple) return undefined;
     if (pauseOnHover && isHovered) return undefined;
 
     const timer = setInterval(() => {
       if (isAnimatingRef.current) return;
-      setPosition((p) => (p >= lastIndex ? 0 : p + 1));
+      goTo(positionRef.current >= lastIndex ? 0 : positionRef.current + 1);
     }, autoplayDelay);
     return () => clearInterval(timer);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [autoplay, autoplayDelay, isHovered, pauseOnHover, hasMultiple, lastIndex]);
 
   // Native (non-passive) listener: React's onWheel is passive by default, so
@@ -88,9 +120,9 @@ export function Carousel({ slides, background, autoplay = false, autoplayDelay =
     const onWheel = (e: WheelEvent) => {
       if (Math.abs(e.deltaX) <= Math.abs(e.deltaY)) return; // vertical scroll, let the page handle it
       e.preventDefault();
-      if (Math.abs(e.deltaX) < WHEEL_THRESHOLD || wheelLocked.current || isAnimatingRef.current) return;
+      if (Math.abs(e.deltaX) < WHEEL_THRESHOLD || wheelLocked.current) return;
       wheelLocked.current = true;
-      setPosition((p) => clamp(p + (e.deltaX > 0 ? 1 : -1)));
+      goTo(positionRef.current + (e.deltaX > 0 ? 1 : -1));
       setTimeout(() => { wheelLocked.current = false; }, WHEEL_COOLDOWN_MS);
     };
 
@@ -98,16 +130,6 @@ export function Carousel({ slides, background, autoplay = false, autoplayDelay =
     return () => el.removeEventListener("wheel", onWheel);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [hasMultiple]);
-
-  const stopAnimating = () => {
-    isAnimatingRef.current = false;
-    setIsAnimating(false);
-  };
-
-  const handleAnimationStart = () => {
-    isAnimatingRef.current = true;
-    setIsAnimating(true);
-  };
 
   const handleDragEnd = (_: MouseEvent | TouchEvent | PointerEvent, info: PanInfo): void => {
     if (isAnimatingRef.current) return;
@@ -119,19 +141,13 @@ export function Carousel({ slides, background, autoplay = false, autoplayDelay =
           ? -1
           : 0;
 
-    if (direction === 0) return;
-    setPosition((p) => clamp(p + direction));
+    // direction may be 0 for a sub-threshold drag; goTo still re-settles x to the current slide.
+    goTo(position + direction);
   };
 
-  const goPrev = () => {
-    if (isAnimatingRef.current) return;
-    setPosition((p) => clamp(p - 1));
-  };
+  const goPrev = () => goTo(position - 1);
 
-  const goNext = () => {
-    if (isAnimatingRef.current) return;
-    setPosition((p) => clamp(p + 1));
-  };
+  const goNext = () => goTo(position + 1);
 
   const currentSlide = slides[position];
 
@@ -149,12 +165,9 @@ export function Carousel({ slides, background, autoplay = false, autoplayDelay =
         drag={hasMultiple && !isAnimating ? "x" : false}
         dragConstraints={{ left: -lastIndex * itemWidth, right: 0 }}
         dragElastic={0.2}
+        dragMomentum={false}
         style={{ x, perspective: 1000, perspectiveOrigin: `${position * itemWidth + itemWidth / 2}px 50%` }}
         onDragEnd={handleDragEnd}
-        animate={{ x: -(position * itemWidth) }}
-        transition={SPRING_OPTIONS}
-        onAnimationStart={handleAnimationStart}
-        onAnimationComplete={stopAnimating}
       >
         {slides.map((slide, i) => (
           <SlideItem key={`${slide.label}-${i}`} slide={slide} index={i} itemWidth={itemWidth} x={x} />
@@ -176,7 +189,7 @@ export function Carousel({ slides, background, autoplay = false, autoplayDelay =
             {slides.map((_, i) => (
               <button
                 key={i}
-                onClick={() => setPosition(i)}
+                onClick={() => goTo(i)}
                 className={`btn-reset carousel-dot ${i === position ? "carousel-dot--active" : ""}`}
                 aria-label={`Go to slide ${i + 1}`}
               />
