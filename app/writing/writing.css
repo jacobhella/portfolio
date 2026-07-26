@@ -33,6 +33,7 @@
 }
 
 .writing-row-date {
+  font-family: var(--font-space-mono), monospace;
   font-size: 12px;
   color: var(--color-text-faint);
   flex-shrink: 0;
@@ -46,6 +47,7 @@
 }
 
 .writing-row-time {
+  font-family: var(--font-space-mono), monospace;
   font-size: 12px;
   color: var(--color-text-muted);
 }

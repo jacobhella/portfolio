@@ -1,7 +1,8 @@
-import { ABOUT_SLIDES, EXPERIENCES, Experience, TESTIMONIALS, formatExperienceRange } from "@/app/portfolio-data";
+import { ABOUT_SLIDES, EXPERIENCES, TESTIMONIALS } from "@/app/portfolio-data";
 import { SectionLabel } from "@/app/components/SectionLabel";
 import { TestimonialCard } from "@/app/components/TestimonialCard";
 import { Carousel } from "@/app/components/Carousel";
+import { ExperienceList } from "@/app/about/ExperienceList";
 import "@/app/globals.css";
 import "@/app/about/about.css";
 
@@ -34,11 +35,7 @@ export default function Page() {
       <section className="section-padding">
         <div className="layout-container">
           <SectionLabel>Experience</SectionLabel>
-          <div>
-            {EXPERIENCES.map((e, i) => (
-              <ExperienceRow key={e.id} experience={e} last={i === EXPERIENCES.length - 1} />
-            ))}
-          </div>
+          <ExperienceList experiences={EXPERIENCES} />
         </div>
       </section>
 
@@ -52,25 +49,5 @@ export default function Page() {
         </div>
       </section>
     </>
-  );
-}
-
-interface ExperienceRowProps {
-  experience: Experience;
-  last: boolean;
-}
-
-function ExperienceRow({ experience: e, last }: ExperienceRowProps) {
-  return (
-    <div className={`experience-row ${last ? "experience-row--last" : ""}`}>
-      <div className="experience-row-header">
-        <div>
-          <h3 className="experience-row-role">{e.role}</h3>
-          <p className="experience-row-company">{e.company}</p>
-        </div>
-        <span className="experience-row-dates">{formatExperienceRange(e)}</span>
-      </div>
-      <p className="experience-row-description">{e.description}</p>
-    </div>
   );
 }

@@ -12,12 +12,12 @@ export default function Page() {
       <section className="section-padding section-hero">
         <div className="layout-container">
           <p className="eyebrow home-hero-eyebrow">
-            Available for work · 2026
+            Available for work
           </p>
 
           <div className="home-hero-grid">
             <h1 className="home-hero-title">
-              Designer and Developer
+              Developer and Designer
             </h1>
 
             <p className="body-lede">

@@ -26,19 +26,21 @@
   margin-bottom: 28px;
 }
 
-.home-services > div:last-child {
-  border-bottom: 1px solid var(--color-divider);
+.home-services {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
 .home-services-row {
   display: flex;
-  align-items: center;
-  gap: 16px;
-  padding: 14px 0;
-  border-top: 1px solid var(--color-divider);
+  align-items: baseline;
+  gap: 14px;
+  padding: 4px 0;
 }
 
 .home-service-num {
+  font-family: var(--font-space-mono), monospace;
   font-size: 11px;
   color: var(--color-text-faint);
   letter-spacing: 0.05em;
@@ -46,8 +48,8 @@
 }
 
 .home-service-label {
-  font-weight: 700;
-  color: var(--color10);
+  font-weight: 500;
+  color: var(--color-text-secondary);
   font-size: 15px;
 }
 

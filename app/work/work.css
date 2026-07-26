@@ -29,6 +29,7 @@
 }
 
 .work-detail-year {
+  font-family: var(--font-space-mono), monospace;
   font-size: 14px;
   color: var(--color-text-faint);
   flex-shrink: 0;
