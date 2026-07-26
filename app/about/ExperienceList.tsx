@@ -41,18 +41,18 @@ function ExperienceRow({ experience: e, last, open, onToggle }: ExperienceRowPro
         aria-expanded={open}
         className="btn-reset experience-row-header"
       >
-        <div>
+        <div className="text-highlight">
           <h3 className="experience-row-role">{e.role}</h3>
           <p className="experience-row-company">{e.company}</p>
         </div>
 
-        <div className="experience-row-meta">
+        <div className="experience-row-meta text-highlight">
           <span className="experience-row-dates">{formatExperienceRange(e)}</span>
           <span className={`experience-row-arrow ${open ? "experience-row-arrow--open" : ""}`}>&gt;</span>
         </div>
       </button>
 
-      {open && <p className="experience-row-description">{e.description}</p>}
+      {open && <p className="experience-row-description text-highlight">{e.description}</p>}
     </div>
   );
 }

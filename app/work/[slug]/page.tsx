@@ -17,7 +17,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
   return (
     <section className="section-padding section-hero">
       <div className="layout-container">
-        <Link href={PAGE_PATHS.Work} className="work-detail-back">&lt; Back to work</Link>
+        <Link href={PAGE_PATHS.Work} className="work-detail-back text-highlight">&lt; Back to work</Link>
 
         <div className="work-detail-slider-section">
           <Carousel slides={project.images} background={project.color} />
@@ -25,12 +25,12 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
 
         <div className="work-detail-header">
           <h1 className="heading-hero">{project.title}</h1>
-          <span className="work-detail-year">{project.year}</span>
+          <span className="work-detail-year text-highlight">{project.year}</span>
         </div>
 
         <span className="work-card-tag">{project.category}</span>
 
-        <p className="work-detail-desc">{project.desc}</p>
+        <p className="work-detail-desc text-highlight">{project.desc}</p>
       </div>
     </section>
   );

@@ -11,7 +11,7 @@ export default function Page() {
           <div className="grid-2col grid-2col--top">
             <h1 className="heading-hero heading-hero--span">Get in touch</h1>
 
-            <p className="body-lede">
+            <p className="body-lede text-highlight">
               Feel free to reach out via email or connect with me on social media. I look forward to hearing from you!
             </p>
 

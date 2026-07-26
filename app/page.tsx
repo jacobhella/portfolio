@@ -11,7 +11,7 @@ export default function Page() {
       {/* Hero */}
       <section className="section-padding section-hero">
         <div className="layout-container">
-          <p className="eyebrow home-hero-eyebrow">
+          <p className="eyebrow home-hero-eyebrow text-highlight">
             Available for work
           </p>
 
@@ -20,11 +20,11 @@ export default function Page() {
               Developer and Designer
             </h1>
 
-            <p className="body-lede">
+            <p className="body-lede text-highlight">
               I have experienced something cool!
             </p>
 
-            <div className="home-services">
+            <div className="home-services text-highlight">
               {SERVICES.map((s) => (
                 <div key={s.num} className="home-services-row">
                   <span className="home-service-num">{s.num}</span>
@@ -40,8 +40,8 @@ export default function Page() {
       <section className="section-padding">
         <div className="layout-container">
           <div className="divider-bottom home-work-header">
-            <p className="eyebrow">Selected Work</p>
-            <Link href={PAGE_PATHS.Work} className="home-view-all">View all &gt;</Link>
+            <p className="eyebrow text-highlight">Selected Work</p>
+            <Link href={PAGE_PATHS.Work} className="home-view-all text-highlight">View all &gt;</Link>
           </div>
 
           <div className="card-grid">

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Poppins, Space_Mono } from "next/font/google";
 import { Nav } from "@/app/components/Nav";
 import { Footer } from "@/app/components/Footer";
+import PixelBlast from "@/app/components/PixelBlast";
 import "./globals.css";
 
 const inter = Inter({
@@ -44,9 +45,23 @@ export default function RootLayout({
     >
       <body>
         <div className="root-layout">
+          <div className="site-background" aria-hidden="true">
+            <PixelBlast
+              variant="square"
+              pixelSize={3}
+              color="#a5c9ca"
+              patternScale={2}
+              patternDensity={0.5}
+              enableRipples={false}
+              speed={0.5}
+              transparent
+              edgeFade={0}
+            />
+          </div>
+
           <Nav />
 
-          <main style={{ position: "relative", zIndex: 1 }}>
+          <main>
             {children}
           </main>
 

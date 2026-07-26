@@ -165,6 +165,7 @@
   padding: 40px 0 32px;
   position: relative;
   z-index: 1;
+  background-color: var(--color60);
 }
 
 .footer-row {
@@ -516,6 +517,7 @@
 
 .work-card-tag {
   display: inline-block;
+  background: var(--color60);
   margin-top: 12px;
   font-size: 11px;
   color: var(--color-text-muted);

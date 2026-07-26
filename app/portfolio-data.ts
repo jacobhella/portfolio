@@ -116,8 +116,8 @@ export const PROJECTS: Project[] = [
 ];
 
 export const ABOUT_SLIDES: CarouselImage[] = [
-  { src: `${BASE_PATH}/me/climbing.jpeg`, color: "#c9bdb0", label: "Climbing" },
-  { src: `${BASE_PATH}/me/skiing.jpeg`, color: "#c9bdb0", label: "Skiing" },
+  { src: `${BASE_PATH}/me/climbing.jpeg`, color: "#A5C9CA", label: "Climbing" },
+  { src: `${BASE_PATH}/me/skiing.jpeg`, color: "#A5C9CA", label: "Skiing" },
 ];
 
 export const ARTICLES: Article[] = [

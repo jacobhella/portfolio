@@ -14,7 +14,7 @@ export default function Page() {
         <div className="layout-container">
           <div className="grid-2col">
             <h1 className="heading-hero heading-hero--span">A bit about me</h1>
-            <div className="about-bio">
+            <div className="about-bio text-highlight">
               <p>I'm Jacob, a... </p>
               <p>I enjoy working with...</p>
               <p>In my work, I keep up with new trends and technologies...</p>

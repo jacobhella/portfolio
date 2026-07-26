@@ -10,7 +10,7 @@ export default function Page() {
           <div className="grid-2col grid-2col--spaced">
             <h1 className="heading-hero">Work</h1>
 
-            <p className="body-lede body-lede--end">
+            <p className="body-lede body-lede--end text-highlight">
               Some of my cool work!
             </p>
           </div>

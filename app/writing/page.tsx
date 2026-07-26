@@ -12,7 +12,7 @@ export default function Page() {
               Writing
             </h1>
 
-            <p className="body-lede body-lede--end">
+            <p className="body-lede body-lede--end text-highlight">
               Some cool reading!
             </p>
           </div>
@@ -38,11 +38,11 @@ function ArticleRow({ article: a, last }: ArticleRowProps) {
   return (
     <a href={a.url} target="_blank" rel="noopener noreferrer" className={`writing-row ${last ? "writing-row--last" : ""}`}>
       <div className="writing-row-left">
-        <span className="writing-row-date">{a.date}</span>
-        <h3 className="writing-row-title">{a.title}</h3>
+        <span className="writing-row-date text-highlight">{a.date}</span>
+        <h3 className="writing-row-title text-highlight">{a.title}</h3>
       </div>
 
-      <div className="writing-row-right">
+      <div className="writing-row-right text-highlight">
         <span className="writing-row-time">{a.readTime}</span>
         <span className="writing-row-arrow">&gt;</span>
       </div>

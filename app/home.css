@@ -29,14 +29,13 @@
 .home-services {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 16px;
 }
 
 .home-services-row {
   display: flex;
   align-items: baseline;
   gap: 14px;
-  padding: 4px 0;
 }
 
 .home-service-num {
