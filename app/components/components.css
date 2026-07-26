@@ -523,5 +523,5 @@
   text-transform: uppercase;
   border: 1px solid color-mix(in srgb, var(--foreground) 15%, transparent);
   border-radius: 9999px;
-  padding: 2px 0px;
+  padding: 2px 10px;
 }
