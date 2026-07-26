@@ -16,12 +16,6 @@
   --color-text-faint: #bbb;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground: #ededed;
-  }
-}
-
 body {
   background: var(--color60);
   color: var(--foreground);
