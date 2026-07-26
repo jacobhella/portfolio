@@ -118,23 +118,11 @@ export const PROJECTS: Project[] = [
     { src: `${BASE_PATH}/lithium/charging.png`, label: "Charging" },
     { src: `${BASE_PATH}/lithium/receipt.png`, label: "Receipt" },
   ] },
-  { id: 4, slug: "photography", title: "Photography", category: "Hobby", year: "2024", color: "#c9bdb0", desc: "Some of my favorite photos from my exchange in Japan.", images: [
-    { src: `${BASE_PATH}/photography/fish.jpg`, label: "Fish" },
-    { src: `${BASE_PATH}/photography/booth.JPG`, label: "Booth" },
-    { src: `${BASE_PATH}/photography/cops.jpg`, label: "Cops" },
-    { src: `${BASE_PATH}/photography/computer.jpg`, label: "Computer" },
-    { src: `${BASE_PATH}/photography/station.JPG`, label: "Station" },
-    { src: `${BASE_PATH}/photography/lake.jpg`, label: "Lake" },
-    { src: `${BASE_PATH}/photography/train.JPG`, label: "Train" },
-    { src: `${BASE_PATH}/photography/campus.JPG`, label: "Campus" },
-    { src: `${BASE_PATH}/photography/cliff.JPG`, label: "Cliff" },
-    { src: `${BASE_PATH}/photography/building.JPG`, label: "Building" },
-  ] },
 ];
 
 export const ABOUT_SLIDES: CarouselImage[] = [
-  { src: `${BASE_PATH}/photography/climbing.jpeg`, color: "#c9bdb0", label: "Climbing" },
-  { src: `${BASE_PATH}/photography/skiing.jpeg`, color: "#c9bdb0", label: "Skiing" },
+  { src: `${BASE_PATH}/me/climbing.jpeg`, color: "#c9bdb0", label: "Climbing" },
+  { src: `${BASE_PATH}/me/skiing.jpeg`, color: "#c9bdb0", label: "Skiing" },
 ];
 
 export const ARTICLES: Article[] = [
@@ -161,10 +149,10 @@ export const EXPERIENCES: Experience[] = [
 });
 
 export const SERVICES: Service[] = [
-  { num: "01", label: "Product Designer" },
-  { num: "02", label: "UX Researcher" },
-  { num: "03", label: "Frontend Developer" },
-  { num: "04", label: "Backend Developer" },
+  { num: "01", label: "Frontend Developer" },
+  { num: "02", label: "Backend Developer" },
+  { num: "03", label: "UX Researcher" },
+  { num: "04", label: "Product Designer" },
 ];
 
 export const SOCIALS: Social[] = [
