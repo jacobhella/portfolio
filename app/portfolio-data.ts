@@ -103,7 +103,7 @@ export const PROJECTS: Project[] = [
     { src: `${BASE_PATH}/tictactoe/settings.png`, label: "Settings" },
     { src: `${BASE_PATH}/tictactoe/active_game.png`, label: "Active game" },
   ] },
-  { id: 3, slug: "lithium", title: "Lithium", category: "Product design", year: "2023", color: "#556378", desc: "An app for charging electric vehicles designed in Figma. Designed at Umeå University Design campus.", images: [
+  { id: 3, slug: "lithium", title: "Lithium", category: "Product design", year: "2023", color: "#556378", desc: "An app for charging electric vehicles designed in Figma. Designed at Umeå Institute of Design.", images: [
     { src: `${BASE_PATH}/lithium/profile.png`, label: "Profile" },
     { src: `${BASE_PATH}/lithium/map.png`, label: "Map" },
     { src: `${BASE_PATH}/lithium/driving.png`, label: "Driving" },
