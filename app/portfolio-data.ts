@@ -89,14 +89,6 @@ export function formatExperienceRange(e: Experience): string {
   return `${formatExperienceDate(e.startDate)} – ${e.endDate ? formatExperienceDate(e.endDate) : "Present"}`;
 }
 
-// Generic placeholder slides shown until real project photos are added to
-// public/ — swap in a `src` per slide and these colors are ignored.
-const PLACEHOLDER_SLIDES: CarouselImage[] = [
-  { color: "#E2DDD6", label: "Overview" },
-  { color: "#D6DDE2", label: "Detail" },
-  { color: "#DDD6E2", label: "Process" },
-];
-
 export const PROJECTS: Project[] = [
   { id: 1, slug: "pokemon-starters", title: "Choose Your Starter!", category: "Side project", year: "2025", color: "#b3b3c1", desc: "A website for choosing your favorite Pokémon starter. Built with standard HTML5 and CSS3 and more.", images: [
     { src: `${BASE_PATH}/starters/index.png`, label: "Home" },
@@ -118,6 +110,9 @@ export const PROJECTS: Project[] = [
     { src: `${BASE_PATH}/lithium/charging.png`, label: "Charging" },
     { src: `${BASE_PATH}/lithium/receipt.png`, label: "Receipt" },
   ] },
+  { id: 4, slug: "sudoku", title: "Sudoku", category: "Side project", year: "2023", color: "#c9bdb0", desc: "Built a small Sudoku generator in C during my spare time. As a big Sudoku enthusiast, it was nice to always have new Sudoku puzzles on hand.", images: [
+    { label: "Sudoku" },
+  ] },
 ];
 
 export const ABOUT_SLIDES: CarouselImage[] = [
@@ -137,11 +132,10 @@ export const TESTIMONIALS: Testimonial[] = [
 
 export const EXPERIENCES: Experience[] = [
   { id: 1, role: "Intern", company: "Oryx Simulations", startDate: "2026-01", endDate: "2026-06", description: "Wrote my master's thesis." },
-  { id: 2, role: "Some Role", company: "Another Company", startDate: "2022-01", endDate: "2024-05", description: "I worked." },
-  { id: 3, role: "Exchange Student in Tokyo", company: "Tokyo Metropolitan University", startDate: "2024-09", endDate: "2025-02", description: "Studied abroad and gained international experience in Japan." },
-  { id: 4, role: "Master's in Interactiontechnology and Design", company: "Umeå University", startDate: "2021-07", endDate: "2026-06", description: "Pursuing a master's degree in interaction technology and design." },
-  { id: 5, role: "Exchange Student in Phoenix", company: "Arizona School of the Arts", startDate: "2018-07", endDate: "2019-06", description: "Studied abroad and gained international experience in the United States." },
-
+  { id: 2, role: "Exchange Student in Tokyo", company: "Tokyo Metropolitan University", startDate: "2024-09", endDate: "2025-02", description: "Studied abroad and gained international experience in Japan." },
+  { id: 3, role: "Master's in Interactiontechnology and Design", company: "Umeå University", startDate: "2021-07", endDate: "2026-06", description: "Pursuing a master's degree in interaction technology and design." },
+  { id: 4, role: "Exchange Student in Phoenix", company: "Arizona School of the Arts", startDate: "2018-07", endDate: "2019-06", description: "Studied abroad and gained international experience in the United States." },
+  { id: 5, role: "Mentor in Mathematics", company: "Umeå University", startDate: "2022-08", endDate: "2022-09", description: "Worked as a mentor in mathematics at Umeå University on the course Introductory Algebra (5MA173). The course is a week-long introduction course for newly enrolled engineering students. Was responsible for facilitating classes of 15 students." },
 ].sort((a, b) => {
   const aEnd = a.endDate ?? "9999-12";
   const bEnd = b.endDate ?? "9999-12";
