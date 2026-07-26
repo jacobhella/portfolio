@@ -27,7 +27,7 @@ export default function Page() {
       {/* Image slider */}
       <section className="about-slider-section">
         <div className="layout-container">
-          <Carousel slides={ABOUT_SLIDES} />
+          <Carousel slides={ABOUT_SLIDES} autoplay />
         </div>
       </section>
 
@@ -36,16 +36,6 @@ export default function Page() {
         <div className="layout-container">
           <SectionLabel>Experience</SectionLabel>
           <ExperienceList experiences={EXPERIENCES} />
-        </div>
-      </section>
-
-      {/* Testimonials */}
-      <section className="section-padding">
-        <div className="layout-container">
-          <SectionLabel>Testimonials</SectionLabel>
-          <div className="card-grid">
-            {TESTIMONIALS.map((t, i) => <TestimonialCard key={i} t={t} />)}
-          </div>
         </div>
       </section>
     </>

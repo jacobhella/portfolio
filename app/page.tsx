@@ -45,7 +45,7 @@ export default function Page() {
           </div>
 
           <div className="card-grid">
-            {PROJECTS.slice(0, 4).map((p) => (
+            {PROJECTS.slice(0, 3).map((p) => (
               <WorkCard key={p.id} project={p} />
             ))}
           </div>
@@ -72,19 +72,6 @@ export default function Page() {
                 <p>I have a passion for...</p>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials */}
-      <section className="section-padding">
-        <div className="layout-container">
-          <SectionLabel>Kind Words</SectionLabel>
-
-          <div className="card-grid">
-            {TESTIMONIALS.slice(0, 2).map((t, i) => (
-              <TestimonialCard key={i} t={t} />
-            ))}
           </div>
         </div>
       </section>
