@@ -80,6 +80,12 @@ h1 {
   padding: 0 32px;
 }
 
+@media (max-width: 768px) {
+  .layout-container {
+    padding: 0 16px;
+  }
+}
+
 /* Accessible Interactive Reset Button */
 .btn-reset {
   background: none;

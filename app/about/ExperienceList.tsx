@@ -41,7 +41,7 @@ function ExperienceRow({ experience: e, open, onToggle }: ExperienceRowProps) {
       className="btn-reset experience-row list-panel-row"
     >
       <div className="experience-row-header">
-        <div>
+        <div className="experience-row-info">
           <h3 className="experience-row-role">{e.role}</h3>
           <p className="experience-row-company">{e.company}</p>
         </div>

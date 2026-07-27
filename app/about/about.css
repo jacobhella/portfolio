@@ -30,14 +30,27 @@
   transition: opacity 0.15s ease;
 }
 
+@media (max-width: 768px) {
+  .experience-row-header {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 6px;
+  }
+}
+
 .experience-row:hover {
   opacity: 0.6;
+}
+
+.experience-row-info {
+  min-width: 0;
 }
 
 .experience-row-role {
   font-size: clamp(15px, 2vw, 20px);
   font-weight: 700;
   color: var(--color10);
+  overflow-wrap: break-word;
 }
 
 .experience-row-company {
