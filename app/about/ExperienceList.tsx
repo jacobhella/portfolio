@@ -52,7 +52,11 @@ function ExperienceRow({ experience: e, open, onToggle }: ExperienceRowProps) {
         </div>
       </div>
 
-      {open && <p className="experience-row-description">{e.description}</p>}
+      <div className={`experience-row-description-panel ${open ? "experience-row-description-panel--open" : ""}`}>
+        <div className="experience-row-description-inner">
+          <p className="experience-row-description">{e.description}</p>
+        </div>
+      </div>
     </button>
   );
 }

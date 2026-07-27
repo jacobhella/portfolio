@@ -76,10 +76,26 @@
   transform: rotate(90deg);
 }
 
+.experience-row-description-panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  transition: grid-template-rows 0.3s ease, opacity 0.2s ease;
+}
+
+.experience-row-description-panel--open {
+  grid-template-rows: 1fr;
+  opacity: 1;
+}
+
+.experience-row-description-inner {
+  overflow: hidden;
+}
+
 .experience-row-description {
   font-family: var(--font-inter), sans-serif;
   font-size: 15px;
   line-height: 1.7;
   color: var(--color-text-secondary);
-  margin-top: 12px;
+  padding-top: 12px;
 }
