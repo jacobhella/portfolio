@@ -41,7 +41,7 @@
 .home-service-num {
   font-family: var(--font-space-mono), monospace;
   font-size: 11px;
-  color: var(--color-text-faint);
+  color: var(--color-text-muted);
   letter-spacing: 0.05em;
   min-width: 24px;
 }
@@ -63,9 +63,12 @@
 .home-view-all {
   font-size: 13px;
   line-height: 18px;
+  color: var(--color-text-tertiary);
+  text-decoration: none;
+}
+
+.home-view-all:hover {
   color: var(--color10);
-  text-decoration: underline;
-  text-underline-offset: 3px;
 }
 
 .home-about-grid {
@@ -96,7 +99,6 @@
   font-size: 16px;
   color: var(--color10);
   text-decoration: none;
-  border-bottom: 1px solid color-mix(in srgb, var(--color-ink) 30%, transparent);
   padding-bottom: 3px;
 }
 

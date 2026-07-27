@@ -2,7 +2,7 @@
   font-family: var(--font-inter), sans-serif;
   font-size: 17px;
   line-height: 1.8;
-  color: #444;
+  color: var(--color-text-secondary);
 }
 
 .about-bio p {
@@ -18,17 +18,7 @@
 }
 
 .experience-row {
-  padding: 32px 0;
-  border-top: 1px solid var(--color-divider);
-}
-
-.experience-row:first-child {
-  border-top: none;
-  padding-top: 0;
-}
-
-.experience-row--last {
-  border-bottom: 1px solid var(--color-divider);
+  padding: 12px 18px;
 }
 
 .experience-row-header {
@@ -40,7 +30,7 @@
   transition: opacity 0.15s ease;
 }
 
-.experience-row-header:hover {
+.experience-row:hover {
   opacity: 0.6;
 }
 
@@ -65,7 +55,7 @@
 .experience-row-dates {
   font-family: var(--font-space-mono), monospace;
   font-size: 12px;
-  color: var(--color-text-faint);
+  color: var(--color-text-muted);
   flex-shrink: 0;
 }
 

@@ -39,7 +39,7 @@ export default function Page() {
       {/* Featured work */}
       <section className="section-padding">
         <div className="layout-container">
-          <div className="divider-bottom home-work-header">
+          <div className="home-work-header">
             <p className="eyebrow text-highlight">Selected Work</p>
             <Link href={PAGE_PATHS.Work} className="home-view-all text-highlight">View all &gt;</Link>
           </div>

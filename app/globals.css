@@ -13,7 +13,6 @@
   --color-text-secondary: #555;
   --color-text-tertiary: #777;
   --color-text-muted: #999;
-  --color-text-faint: #bbb;
 }
 
 body {
@@ -41,8 +40,8 @@ main {
 }
 
 ::selection {
-  background: #0F0F0D;
-  color: #F7F5F0;
+  background: var(--color-ink);
+  color: var(--color-cream);
 }
 
 .site-background {
@@ -102,10 +101,6 @@ h1 {
    goes in each page's own CSS file (e.g. app/about/about.css);
    components-only goes in app/components/components.css. */
 
-.divider-bottom {
-  border-bottom: 1px solid var(--color-divider);
-}
-
 .eyebrow {
   font-size: 12px;
   line-height: 18px;
@@ -152,6 +147,20 @@ h1 {
 
 /* Shared page patterns — used by two or more pages under app/.
    Patterns used by only a single page live in that page's own CSS file. */
+
+.list-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: var(--color30);
+  border-radius: 16px;
+  padding: 8px;
+}
+
+.list-panel-row {
+  background: var(--color60);
+  border-radius: 8px;
+}
 
 .section-hero {
   padding-top: 140px;

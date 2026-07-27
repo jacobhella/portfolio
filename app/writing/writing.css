@@ -11,18 +11,13 @@
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  padding: 24px 0;
-  border-top: 1px solid color-mix(in srgb, var(--foreground) 10%, transparent);
+  padding: 20px 26px;
   text-decoration: none;
   transition: opacity 0.15s ease;
 }
 
 .writing-row:hover {
   opacity: 0.6;
-}
-
-.writing-row--last {
-  border-bottom: 1px solid color-mix(in srgb, var(--foreground) 10%, transparent);
 }
 
 .writing-row-left {
@@ -35,7 +30,7 @@
 .writing-row-date {
   font-family: var(--font-space-mono), monospace;
   font-size: 12px;
-  color: var(--color-text-faint);
+  color: var(--color-text-muted);
   flex-shrink: 0;
 }
 

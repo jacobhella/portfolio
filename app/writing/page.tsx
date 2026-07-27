@@ -17,7 +17,7 @@ export default function Page() {
             </p>
           </div>
 
-          <div>
+          <div className="list-panel">
             {ARTICLES.map((a, i) => (
               <ArticleRow key={a.id} article={a} last={i === ARTICLES.length - 1} />
             ))}
@@ -36,13 +36,13 @@ interface ArticleRowProps {
 
 function ArticleRow({ article: a, last }: ArticleRowProps) {
   return (
-    <a href={a.url} target="_blank" rel="noopener noreferrer" className={`writing-row ${last ? "writing-row--last" : ""}`}>
+    <a href={a.url} target="_blank" rel="noopener noreferrer" className="writing-row list-panel-row">
       <div className="writing-row-left">
-        <span className="writing-row-date text-highlight">{a.date}</span>
-        <h3 className="writing-row-title text-highlight">{a.title}</h3>
+        <span className="writing-row-date">{a.date}</span>
+        <h3 className="writing-row-title">{a.title}</h3>
       </div>
 
-      <div className="writing-row-right text-highlight">
+      <div className="writing-row-right">
         <span className="writing-row-time">{a.readTime}</span>
         <span className="writing-row-arrow">&gt;</span>
       </div>

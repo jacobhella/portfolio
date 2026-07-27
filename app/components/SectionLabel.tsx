@@ -3,8 +3,8 @@ import "@/app/components/components.css";
 
 export function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
-    <p className="eyebrow divider-bottom section-label">
-      {children}
+    <p className="eyebrow section-label">
+      <span className="text-highlight">{children}</span>
     </p>
   );
 }
