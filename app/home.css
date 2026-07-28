@@ -20,6 +20,7 @@
   line-height: 1.05;
   grid-column: 1 / -1;
   max-width: 900px;
+  padding-left: 14px;
 }
 
 .home-hero-eyebrow {
@@ -67,8 +68,10 @@
   text-decoration: none;
 }
 
-.home-view-all:hover {
-  color: var(--color10);
+@media (hover: hover) {
+  .home-view-all:hover {
+    color: var(--color10);
+  }
 }
 
 .home-about-grid {
