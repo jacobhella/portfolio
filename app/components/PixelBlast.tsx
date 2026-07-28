@@ -495,9 +495,15 @@ const PixelBlast: React.FC<PixelBlastProps> = ({
         const w = container.clientWidth || 1;
         const h = container.clientHeight || 1;
         renderer.setSize(w, h, false);
+        // renderer.setSize() floors the drawing buffer size but setViewport()
+        // rounds it, so a fractional devicePixelRatio can leave the viewport
+        // 1px larger than the actual buffer. Re-derive the viewport from the
+        // buffer that was actually allocated to keep them in sync.
+        const pr = renderer.getPixelRatio();
+        renderer.setViewport(0, 0, renderer.domElement.width / pr, renderer.domElement.height / pr);
         uniforms.uResolution.value.set(renderer.domElement.width, renderer.domElement.height);
         if (threeRef.current?.composer)
-          threeRef.current.composer.setSize(renderer.domElement.width, renderer.domElement.height);
+          threeRef.current.composer.setSize(w, h, false);
         uniforms.uPixelSize.value = pixelSize * renderer.getPixelRatio();
       };
       setSize();
@@ -554,7 +560,7 @@ const PixelBlast: React.FC<PixelBlastProps> = ({
         }
         composer.addPass(noisePass);
       }
-      if (composer) composer.setSize(renderer.domElement.width, renderer.domElement.height);
+      if (composer) composer.setSize(container.clientWidth || 1, container.clientHeight || 1, false);
       const mapToPixels = (e: PointerEvent) => {
         const rect = renderer.domElement.getBoundingClientRect();
         const scaleX = renderer.domElement.width / rect.width;
