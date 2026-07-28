@@ -5,10 +5,7 @@
   --color30: #A5C9CA;
   --color10: #2C3333;
   --color-text: #424874;
-  --colortextGrey: #888;
 
-  --color-ink: #0F0F0D;
-  --color-cream: #F7F5F0;
   --color-divider: rgba(15, 15, 13, 0.1);
   --color-text-secondary: #555;
   --color-text-tertiary: #777;
@@ -40,8 +37,8 @@ main {
 }
 
 ::selection {
-  background: var(--color-ink);
-  color: var(--color-cream);
+  background: #0F0F0D;
+  color: #F7F5F0;
 }
 
 .site-background {
@@ -77,7 +74,7 @@ h1 {
 .layout-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 40px;
 }
 
 @media (max-width: 768px) {
