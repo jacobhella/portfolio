@@ -73,8 +73,10 @@
   opacity: 0.65;
 }
 
-.nav-link:hover {
-  opacity: 1;
+@media (hover: hover) {
+  .nav-link:hover {
+    opacity: 1;
+  }
 }
 
 .nav-link--active {
@@ -149,13 +151,15 @@
     border-radius: 8px;
   }
 
-  .nav-link-mobile:hover {
-    opacity: 1;
-  }
-
   .nav-link-mobile--active {
     opacity: 1;
     background: color-mix(in srgb, var(--color60) 12%, transparent);
+  }
+}
+
+@media (max-width: 768px) and (hover: hover) {
+  .nav-link-mobile:hover {
+    opacity: 1;
   }
 }
 
@@ -419,8 +423,10 @@
   transition: transform 0.22s ease-out;
 }
 
-.work-card:hover {
-  transform: translateY(-4px);
+@media (hover: hover) {
+  .work-card:hover {
+    transform: translateY(-4px);
+  }
 }
 
 .work-card-media {
@@ -464,9 +470,11 @@
   transition: all 0.2s ease-out;
 }
 
-.work-card:hover .work-card-badge {
-  opacity: 1;
-  transform: scale(1);
+@media (hover: hover) {
+  .work-card:hover .work-card-badge {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .work-card-badge-arrow {

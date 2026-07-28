@@ -12,8 +12,10 @@
   margin-bottom: 40px;
 }
 
-.work-detail-back:hover {
-  color: var(--color10);
+@media (hover: hover) {
+  .work-detail-back:hover {
+    color: var(--color10);
+  }
 }
 
 .work-detail-slider-section {

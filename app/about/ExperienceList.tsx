@@ -34,29 +34,28 @@ interface ExperienceRowProps {
 
 function ExperienceRow({ experience: e, open, onToggle }: ExperienceRowProps) {
   return (
-    <button
-      type="button"
-      onClick={onToggle}
-      aria-expanded={open}
-      className="btn-reset experience-row list-panel-row"
-    >
-      <div className="experience-row-header">
+    <div className="experience-row list-panel-row">
+      <button
+        type="button"
+        onClick={onToggle}
+        aria-expanded={open}
+        className="btn-reset experience-row-header"
+      >
         <div className="experience-row-info">
           <h3 className="experience-row-role">{e.role}</h3>
           <p className="experience-row-company">{e.company}</p>
         </div>
 
-        <div className="experience-row-meta">
-          <span className="experience-row-dates">{formatExperienceRange(e)}</span>
-          <span className={`experience-row-arrow ${open ? "experience-row-arrow--open" : ""}`}>&gt;</span>
-        </div>
-      </div>
+        <span className="experience-row-dates">{formatExperienceRange(e)}</span>
+
+        <span className={`experience-row-arrow row-arrow ${open ? "experience-row-arrow--open" : ""}`}>&gt;</span>
+      </button>
 
       <div className={`experience-row-description-panel ${open ? "experience-row-description-panel--open" : ""}`}>
         <div className="experience-row-description-inner">
           <p className="experience-row-description">{e.description}</p>
         </div>
       </div>
-    </button>
+    </div>
   );
 }

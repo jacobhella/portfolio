@@ -1,5 +1,6 @@
 import { ARTICLES, Article } from "@/app/portfolio-data";
 import "@/app/writing/writing.css";
+import { SectionLabel } from "../components/SectionLabel";
 
 export default function Page() {
   return (
@@ -16,6 +17,8 @@ export default function Page() {
               Some cool reading!
             </p>
           </div>
+
+          <SectionLabel>Papers</SectionLabel>
 
           <div className="list-panel">
             {ARTICLES.map((a, i) => (
@@ -34,7 +37,7 @@ interface ArticleRowProps {
   last: boolean;
 }
 
-function ArticleRow({ article: a, last }: ArticleRowProps) {
+function ArticleRow({ article: a}: ArticleRowProps) {
   return (
     <a href={a.url} target="_blank" rel="noopener noreferrer" className="writing-row list-panel-row">
       <div className="writing-row-left">
@@ -42,10 +45,9 @@ function ArticleRow({ article: a, last }: ArticleRowProps) {
         <h3 className="writing-row-title">{a.title}</h3>
       </div>
 
-      <div className="writing-row-right">
-        <span className="writing-row-time">{a.readTime}</span>
-        <span className="writing-row-arrow">&gt;</span>
-      </div>
+      <span className="writing-row-time">{a.readTime}</span>
+
+      <span className="writing-row-arrow row-arrow">&gt;</span>
     </a>
   );
 }
