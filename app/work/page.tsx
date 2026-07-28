@@ -11,7 +11,7 @@ export default function Page() {
             <h1 className="heading-hero">Work</h1>
 
             <p className="body-lede body-lede--end text-highlight">
-              Some of my cool work!
+              Here you can find detailed information about my work, side projects, and designs!
             </p>
           </div>
 

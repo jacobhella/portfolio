@@ -21,7 +21,9 @@ export default function Page() {
             </h1>
 
             <p className="body-lede text-highlight">
-              I have experienced something cool!
+              I'm a driven, creative and curious developer and designer with a master's degree in Interaction Technology and Design at Umeå University.
+              I'm interested in creating beautiful and functional web applications and have experience in both frontend and backend development. 
+              I specialize in building web applications, designing user interfaces, and crafting engaging user experiences.
             </p>
 
             <div className="home-services text-highlight">

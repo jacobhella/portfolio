@@ -7,3 +7,9 @@
   flex-direction: column;
   gap: 20px;
 }
+
+@media (max-width: 768px) {
+  .contact-link-stack {
+    padding-left: 14px;
+  }
+}

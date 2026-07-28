@@ -131,7 +131,7 @@ export const TESTIMONIALS: Testimonial[] = [
 ];
 
 export const EXPERIENCES: Experience[] = [
-  { id: 1, role: "Intern", company: "Oryx Simulations", startDate: "2026-01", endDate: "2026-06", description: "Wrote my master's thesis." },
+  { id: 1, role: "Intern", company: "Oryx Simulations", startDate: "2026-01", endDate: "2026-06", description: "Conducted my master's thesis research at Oryx Simulations AB in Umeå. Researched intention recognition and how AI can be implemented in Komatsu Forest simulators to act as a virtual teacher. I facilitated usertests to see how users perceive virtual teaching compared to a human instructor. During this time I was a part of one of the Scrum teams at Oryx and gained a lot of valuable experiences." },
   { id: 2, role: "Exchange Student in Tokyo", company: "Tokyo Metropolitan University", startDate: "2024-09", endDate: "2025-02", description: "Studied abroad and gained international experience in Japan." },
   { id: 3, role: "Master's in Interactiontechnology and Design", company: "Umeå University", startDate: "2021-07", endDate: "2026-06", description: "Pursuing a master's degree in interaction technology and design." },
   { id: 4, role: "Exchange Student in Phoenix", company: "Arizona School of the Arts", startDate: "2018-07", endDate: "2019-06", description: "Studied abroad and gained international experience in the United States." },

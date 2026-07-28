@@ -196,7 +196,7 @@ h1 {
 
 .body-lede {
   font-family: var(--font-inter), sans-serif;
-  font-size: 18px;
+  font-size: clamp(15px, 1.5vw, 18px);
   line-height: 1.75;
   color: var(--color-text-secondary);
 }
