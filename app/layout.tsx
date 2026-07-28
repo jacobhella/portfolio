@@ -11,14 +11,15 @@ const inter = Inter({
   style: ["normal", "italic"],
   subsets: ["latin"],
   display: "swap",
+  preload: false,
 });
 
 const poppins = Poppins({
   variable: "--font-poppins",
-  weight: ["400", "500", "700", "800"],
-  style: ["normal", "italic"],
+  weight: ["400", "500", "700"],
   subsets: ["latin"],
   display: "swap",
+  preload: false,
 });
 
 const spaceMono = Space_Mono({
@@ -26,6 +27,7 @@ const spaceMono = Space_Mono({
   weight: ["400", "700"],
   subsets: ["latin"],
   display: "swap",
+  preload: false,
 });
 
 export const metadata: Metadata = {
