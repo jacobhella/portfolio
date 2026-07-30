@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { PAGE_PATHS, PROJECTS } from "@/app/portfolio-data";
 import { Carousel } from "@/app/components/Carousel";
+import { Linkify } from "@/app/components/Linkify";
 import "@/app/work/work.css";
 
 export function generateStaticParams() {
@@ -30,7 +31,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
 
         <span className="work-card-tag">{project.category}</span>
 
-        <p className="work-detail-desc text-highlight">{project.desc}</p>
+        <p className="work-detail-desc text-highlight"><Linkify text={project.desc} /></p>
       </div>
     </section>
   );
