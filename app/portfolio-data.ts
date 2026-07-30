@@ -98,19 +98,19 @@ export const PROJECTS: Project[] = [
     { src: `${BASE_PATH}/starters/movesets.png`, label: "Movesets" },
     { src: `${BASE_PATH}/starters/facts.png`, label: "Facts" },
   ] },
-  { id: 2, slug: "tic-tac-toe", title: "Tic-Tac-Toe", category: "Side project", year: "2023", color: "#fcead7", desc: "A Tic-tac-toe game built with C#, SignalR, ASP.NET, and NoSQL. Following the MVC design pattern. The project was hosted on Azure but is currently unavailable.", images: [
+  { id: 2, slug: "tic-tac-toe", title: "Tic-Tac-Toe", category: "Side project", year: "2023", color: "#fcead7", desc: "A Tic-tac-toe game I built with C#, SignalR, ASP.NET, and NoSQL. Following the MVC design pattern. The project was hosted on Azure but is currently unavailable. SignalR is a library for ASP.NET that enables real-time communication between the server and clients with websockets.", images: [
     { src: `${BASE_PATH}/tictactoe/index.png`, label: "Home" },
     { src: `${BASE_PATH}/tictactoe/settings.png`, label: "Settings" },
     { src: `${BASE_PATH}/tictactoe/active_game.png`, label: "Active game" },
   ] },
-  { id: 3, slug: "lithium", title: "Lithium", category: "Product design", year: "2023", color: "#556378", desc: "An app for charging electric vehicles designed in Figma. Designed at Umeå Institute of Design.", images: [
+  { id: 3, slug: "lithium", title: "Lithium", category: "Product design", year: "2023", color: "#556378", desc: "An app for charging electric vehicles designed in Figma. This app was designed at Umeå Institute of Design. In the project we used an iterative and user-centered design approach. The app helps users find and navigate to charging stations and keep track of their charging sessions.", images: [
     { src: `${BASE_PATH}/lithium/profile.png`, label: "Profile" },
     { src: `${BASE_PATH}/lithium/map.png`, label: "Map" },
     { src: `${BASE_PATH}/lithium/driving.png`, label: "Driving" },
     { src: `${BASE_PATH}/lithium/charging.png`, label: "Charging" },
     { src: `${BASE_PATH}/lithium/receipt.png`, label: "Receipt" },
   ] },
-  { id: 4, slug: "sudoku", title: "Sudoku", category: "Side project", year: "2023", color: "#c9bdb0", desc: "Built a small Sudoku generator in C during my spare time. As a big Sudoku enthusiast, it was nice to always have new Sudoku puzzles on hand.", images: [
+  { id: 4, slug: "sudoku", title: "Sudoku", category: "Side project", year: "2023", color: "#c9bdb0", desc: "Built a simple Sudoku generator in C during my spare time. As a big Sudoku enthusiast, it was nice to always have new Sudoku puzzles on hand.", images: [
     { label: "Sudoku" },
   ] },
 ];
@@ -132,9 +132,9 @@ export const TESTIMONIALS: Testimonial[] = [
 
 export const EXPERIENCES: Experience[] = [
   { id: 1, role: "Intern", company: "Oryx Simulations", startDate: "2026-01", endDate: "2026-06", description: "Conducted my master's thesis research at Oryx Simulations AB in Umeå. Researched intention recognition and how AI can be implemented in Komatsu Forest simulators to act as a virtual teacher. I facilitated usertests to see how users perceive virtual teaching compared to a human instructor. During this time I was a part of one of the Scrum teams at Oryx and gained a lot of valuable experiences." },
-  { id: 2, role: "Exchange Student in Tokyo", company: "Tokyo Metropolitan University", startDate: "2024-09", endDate: "2025-02", description: "Studied abroad and gained international experience in Japan." },
-  { id: 3, role: "Master's in Interactiontechnology and Design", company: "Umeå University", startDate: "2021-07", endDate: "2026-06", description: "Pursuing a master's degree in interaction technology and design." },
-  { id: 4, role: "Exchange Student in Phoenix", company: "Arizona School of the Arts", startDate: "2018-07", endDate: "2019-06", description: "Studied abroad and gained international experience in the United States." },
+  { id: 2, role: "Exchange Student in Tokyo", company: "Tokyo Metropolitan University", startDate: "2024-09", endDate: "2025-02", description: "Completed an exchange semester in Tokyo, Japan. In Tokyo, I studied Japanese, AI, robotics, accounting, and photography." },
+  { id: 3, role: "Master's in Interaction Technology and Design", company: "Umeå University", startDate: "2021-07", endDate: "2026-06", description: "Pursuing a master's degree in Interaction Technology and Design." },
+  { id: 4, role: "Exchange Student in Phoenix", company: "Arizona School of the Arts", startDate: "2018-07", endDate: "2019-06", description: "Completed an exchange year during high school in Phoenix, AZ. In Phoenix, I studied English, Spanish, music composition, and mathematics." },
   { id: 5, role: "Mentor in Mathematics", company: "Umeå University", startDate: "2022-08", endDate: "2022-09", description: "Worked as a mentor in mathematics at Umeå University on the course Introductory Algebra (5MA173). The course is a week-long introduction course for newly enrolled engineering students. Was responsible for facilitating classes of 15 students." },
 ].sort((a, b) => {
   const aEnd = a.endDate ?? "9999-12";

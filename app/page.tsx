@@ -23,7 +23,6 @@ export default function Page() {
             <p className="body-lede text-highlight">
               I'm a driven, creative and curious developer and designer with a master's degree in Interaction Technology and Design at Umeå University.
               I'm interested in creating beautiful and functional web applications and have experience in both frontend and backend development. 
-              I specialize in building web applications, designing user interfaces, and crafting engaging user experiences.
             </p>
 
             <div className="home-services text-highlight">
@@ -61,7 +60,7 @@ export default function Page() {
             <div className="home-about-grid">
               <div>
                 <h2 className="home-about-heading">
-                  Design that does something — not just something that looks good.
+                  Designs that are useful — not just something that looks good.
                 </h2>
 
                 <Link href={PAGE_PATHS.About} className="home-about-link">
@@ -69,9 +68,8 @@ export default function Page() {
                 </Link>
               </div>
               <div className="home-about-copy">
-                <p>I'm from Umeå, Sweden...</p>
-
-                <p>I have a passion for...</p>
+                <p>I'm from Umeå, Sweden and have studied five years in Interaction Technology and Computer Science.</p>
+                <p>I have a passion for creating innovative solutions that combine aesthetics with functionality.</p>
               </div>
             </div>
           </div>
