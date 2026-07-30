@@ -48,12 +48,6 @@ main {
   pointer-events: none;
 }
 
-@media (max-width: 768px) {
-  .grid-2col {
-    grid-template-columns: 1fr !important;
-  }
-}
-
 h1 {
   color: var(--color-text);
 }
@@ -219,8 +213,20 @@ h1 {
   gap: 32px 80px;
 }
 
+@media (max-width: 768px) {
+  .grid-2col {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 .grid-2col--spaced {
   margin-bottom: 56px;
+}
+
+.linkify-link {
+  color: var(--color10);
+  text-decoration: none;
+  font-weight: 700;
 }
 
 .card-grid {

@@ -7,9 +7,11 @@ export function Linkify({ text }: { text: string }) {
     <>
       {parts.map((part, i) =>
         i % 2 === 1 ? (
-          <a key={i} href={part} target="_blank" rel="noopener noreferrer">
-            Link to project
-          </a>
+          <span key={i}>
+            <a href={part} target="_blank" rel="noopener noreferrer" className="linkify-link">
+              Link to project
+            </a>.
+          </span>
         ) : (
           part
         )

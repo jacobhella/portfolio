@@ -60,7 +60,7 @@ export default function Page() {
             <div className="home-about-grid">
               <div>
                 <h2 className="home-about-heading">
-                  Designs that are useful — not just something that looks good.
+                  Solutions that are useful, not just something that looks good.
                 </h2>
 
                 <Link href={PAGE_PATHS.About} className="home-about-link">
