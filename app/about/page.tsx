@@ -12,14 +12,13 @@ export default function Page() {
       {/* Hero */}
       <section className="section-padding section-hero">
         <div className="layout-container">
-          <div className="grid-2col">
+          <div className="grid-2col grid-2col--spaced">
             <h1 className="heading-hero heading-hero--span">A bit about me</h1>
-            <div className="about-bio text-highlight">
-              <p>I'm Jacob, a developer and designer with a master's degree in Interaction Technology and Design. I have a great interest in computer science and from my thesis project at Oryx Simulation I have learned how to work efficiently in agile development environments.</p>
+            <div className="body-lede text-highlight">
+              <p>I'm Jacob, a developer and designer with a master's degree in Interaction Technology and Design. I have a great interest in computer science and from my thesis project at Oryx Simulations I have learned how to work efficiently in agile development environments.</p>
               <p>I enjoy working with others in a collaborative and social environment.</p>
               <p>In my work, I keep up with new trends and technologies for creating smart and engaging user experiences. I'm excited to build on what I have already learned and develop myself even more!</p>
             </div>
-            <div />
           </div>
         </div>
       </section>

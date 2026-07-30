@@ -90,7 +90,7 @@ export function formatExperienceRange(e: Experience): string {
 }
 
 export const PROJECTS: Project[] = [
-  { id: 1, slug: "pokemon-starters", title: "Choose Your Starter!", category: "Side project", year: "2025", color: "#b3b3c1", desc: "A website for choosing your favorite Pokémon starter. Built with standard HTML5 and CSS3 and more.", images: [
+  { id: 1, slug: "choose-your-starter", title: "Choose Your Starter!", category: "Side project", year: "2025", color: "#b3b3c1", desc: "A website for choosing your favorite Pokémon starter. Built with standard HTML5 and CSS3 and more. You can find the project here: https://jacobhella.github.io/pokemon_starters/", images: [
     { src: `${BASE_PATH}/starters/index.png`, label: "Home" },
     { src: `${BASE_PATH}/starters/bulbasaur.png`, label: "Bulbasaur" },
     { src: `${BASE_PATH}/starters/charmander.png`, label: "Charmander" },

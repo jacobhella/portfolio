@@ -1,18 +1,3 @@
-.about-bio {
-  font-family: var(--font-inter), sans-serif;
-  font-size: clamp(14px, 1.4vw, 17px);
-  line-height: 1.8;
-  color: var(--color-text-secondary);
-}
-
-.about-bio p {
-  margin-bottom: 16px;
-}
-
-.about-bio p:last-child {
-  margin-bottom: 0;
-}
-
 .about-slider-section {
   padding: 0 0 80px;
 }

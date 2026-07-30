@@ -40,7 +40,7 @@
 .work-detail-desc {
   font-family: var(--font-inter), sans-serif;
   font-size: clamp(14px, 1.4vw, 17px);
-  line-height: 1.8;
+  line-height: 1.7;
   color: var(--color-text-secondary);
   max-width: 700px;
   margin-top: 24px;
