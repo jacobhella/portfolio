@@ -68,7 +68,7 @@ export default function Page() {
                 </Link>
               </div>
               <div className="home-about-copy">
-                <p>I'm from Umeå, Sweden and have studied five years in Interaction Technology and Computer Science.</p>
+                <p>I'm from Umeå, Sweden and have studied five years in interaction technology and computer science.</p>
                 <p>I have a passion for creating innovative solutions that combine aesthetics with functionality.</p>
               </div>
             </div>

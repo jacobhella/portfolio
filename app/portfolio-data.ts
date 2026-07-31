@@ -86,11 +86,11 @@ function formatExperienceDate(date: string): string {
 }
 
 export function formatExperienceRange(e: Experience): string {
-  return `${formatExperienceDate(e.startDate)} – ${e.endDate ? formatExperienceDate(e.endDate) : "Present"}`;
+  return `${formatExperienceDate(e.startDate)} - ${e.endDate ? formatExperienceDate(e.endDate) : "Present"}`;
 }
 
 export const PROJECTS: Project[] = [
-  { id: 1, slug: "choose-your-starter", title: "Choose Your Starter!", category: "Side project", year: "2025", color: "#b3b3c1", desc: "A website for choosing your favorite Pokémon starter. Built with standard HTML5 and CSS3 and more. You can find the project here: https://jacobhella.github.io/pokemon_starters/", images: [
+  { id: 1, slug: "choose-your-starter", title: "Choose Your Starter!", category: "Side project", year: "2025", color: "#b3b3c1", desc: "A website that displays information and some fun facts on the first generation Pokémon starters, built with standard HTML5 and CSS3. The purpose of this website was for me to practice my frontend skills and learn some new CSS tricks. You can find the project here: https://jacobhella.github.io/pokemon_starters/", images: [
     { src: `${BASE_PATH}/starters/index.png`, label: "Home" },
     { src: `${BASE_PATH}/starters/bulbasaur.png`, label: "Bulbasaur" },
     { src: `${BASE_PATH}/starters/charmander.png`, label: "Charmander" },
@@ -98,7 +98,7 @@ export const PROJECTS: Project[] = [
     { src: `${BASE_PATH}/starters/movesets.png`, label: "Movesets" },
     { src: `${BASE_PATH}/starters/facts.png`, label: "Facts" },
   ] },
-  { id: 2, slug: "tic-tac-toe", title: "Tic-Tac-Toe", category: "Side project", year: "2023", color: "#fcead7", desc: "A Tic-tac-toe game I built with C#, SignalR, ASP.NET, and NoSQL. Following the MVC design pattern. The project was hosted on Azure but is currently unavailable. SignalR is a library for ASP.NET that enables real-time communication between the server and clients with websockets.", images: [
+  { id: 2, slug: "tic-tac-toe", title: "Tic-Tac-Toe", category: "Side project", year: "2023", color: "#fcead7", desc: "A Tic-tac-toe game I built with C#, ASP.NET, NoSQL, and SignalR. The database stored information of the accounts and the current games that were being played by the users. New accounts had to be verified by an emailsender that I set up with Sendgrid and the passwords were stored with a hashcode. A user could play locally with a bot or with a friend via WebSockets communication. SignalR is a library for ASP.NET that enables real-time communication between the server and clients with WebSockets. The project followed the MVC design pattern. The project was hosted on Azure but is currently unavailable.", images: [
     { src: `${BASE_PATH}/tictactoe/index.png`, label: "Home" },
     { src: `${BASE_PATH}/tictactoe/settings.png`, label: "Settings" },
     { src: `${BASE_PATH}/tictactoe/active_game.png`, label: "Active game" },
@@ -132,10 +132,10 @@ export const TESTIMONIALS: Testimonial[] = [
 
 export const EXPERIENCES: Experience[] = [
   { id: 1, role: "Intern", company: "Oryx Simulations", startDate: "2026-01", endDate: "2026-06", description: "Conducted my master's thesis research at Oryx Simulations AB in Umeå. Researched intention recognition and how AI can be implemented in Komatsu Forest simulators to act as a virtual teacher. I facilitated usertests to see how users perceive virtual teaching compared to a human instructor. During this time I was a part of one of the Scrum teams at Oryx and gained a lot of valuable experiences." },
-  { id: 2, role: "Exchange Student in Tokyo", company: "Tokyo Metropolitan University", startDate: "2024-09", endDate: "2025-02", description: "Completed an exchange semester in Tokyo, Japan. In Tokyo, I studied Japanese, AI, robotics, accounting, and photography." },
+  { id: 2, role: "Exchange Student in Tokyo", company: "Tokyo Metropolitan University", startDate: "2024-09", endDate: "2025-02", description: "Completed an exchange semester in Tokyo, Japan. In Tokyo, I studied Japanese, AI, robotics, accounting, and photography. I loved my time in Japan and learned a ton about their culture." },
   { id: 3, role: "Master's in Interaction Technology and Design", company: "Umeå University", startDate: "2021-07", endDate: "2026-06", description: "Pursuing a master's degree in Interaction Technology and Design." },
   { id: 4, role: "Exchange Student in Phoenix", company: "Arizona School of the Arts", startDate: "2018-07", endDate: "2019-06", description: "Completed an exchange year during high school in Phoenix, AZ. In Phoenix, I studied English, Spanish, music composition, and mathematics." },
-  { id: 5, role: "Mentor in Mathematics", company: "Umeå University", startDate: "2022-08", endDate: "2022-09", description: "Worked as a mentor in mathematics at Umeå University on the course Introductory Algebra (5MA173). The course is a week-long introduction course for newly enrolled engineering students. Was responsible for facilitating classes of 15 students." },
+  { id: 5, role: "Mentor in Mathematics", company: "Umeå University", startDate: "2022-08", endDate: "2022-09", description: "Worked as a mentor in mathematics at Umeå University on the course Introductory Algebra (5MA173). The course is a week-long introduction course for newly enrolled engineering students. I was responsible for facilitating classes of 15 students and supervised a test and the end of the course." },
 ].sort((a, b) => {
   const aEnd = a.endDate ?? "9999-12";
   const bEnd = b.endDate ?? "9999-12";
