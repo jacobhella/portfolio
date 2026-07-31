@@ -1,6 +1,12 @@
-import { CONTACTS, SOCIALS} from "@/app/portfolio-data";
-import { SocialIcon, EmailIcon } from "@/app/components/icons";
+import { CONTACTS, SOCIALS } from "@/app/portfolio-data";
+import { BiLogoGmail, BiLogoGithub, BiLogoLinkedinSquare } from "react-icons/bi";
+import type { IconType } from "react-icons";
 import "@/app/contact/contact.css";
+
+const SOCIAL_ICONS: Record<string, IconType> = {
+  GitHub: BiLogoGithub,
+  LinkedIn: BiLogoLinkedinSquare,
+};
 
 export default function Page() {
   return (
@@ -17,15 +23,18 @@ export default function Page() {
 
             <div className="contact-link-stack">
               <a href={`mailto:${CONTACTS.email}`} className="link-lg social-link">
-                <EmailIcon className="social-icon" />
+                <BiLogoGmail className="social-icon" />
                 {CONTACTS.email}
               </a>
-              {SOCIALS.map((s) => (
-                <a key={s.name} href={s.url} target="_blank" rel="noopener noreferrer" className="link-lg social-link">
-                  <SocialIcon name={s.name} className="social-icon" />
-                  {s.name}
-                </a>
-              ))}
+              {SOCIALS.map((s) => {
+                const Icon = SOCIAL_ICONS[s.name];
+                return (
+                  <a key={s.name} href={s.url} target="_blank" rel="noopener noreferrer" className="link-lg social-link">
+                    {Icon && <Icon className="social-icon" />}
+                    {s.name}
+                  </a>
+                );
+              })}
             </div>
           </div>
         </div>

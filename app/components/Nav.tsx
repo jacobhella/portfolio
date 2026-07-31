@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { PageName, PAGE_PATHS, CONTACTS, isActivePath } from "@/app/portfolio-data";
-import { HamburgerIcon, CloseIcon } from "@/app/components/icons";
+import { IoMenu, IoClose } from "react-icons/io5";
 import "@/app/globals.css";
 import "@/app/components/components.css";
 
@@ -49,7 +49,7 @@ export function Nav() {
           aria-label={menuOpen ? "Close menu" : "Open menu"}
           aria-expanded={menuOpen}
         >
-          {menuOpen ? <CloseIcon className="nav-hamburger-icon" /> : <HamburgerIcon className="nav-hamburger-icon" />}
+          {menuOpen ? <IoClose className="nav-hamburger-icon" /> : <IoMenu className="nav-hamburger-icon" />}
         </button>
 
       </div>
