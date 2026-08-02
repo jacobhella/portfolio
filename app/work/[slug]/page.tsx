@@ -18,7 +18,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
   return (
     <section className="section-padding section-hero">
       <div className="layout-container">
-        <Link href={PAGE_PATHS.Work} className="work-detail-back text-highlight" scroll={false}>
+        <Link href={PAGE_PATHS.Work} className="work-detail-back text-highlight">
           &lt; Back to work
         </Link>
 

@@ -36,6 +36,10 @@ main {
   padding: 0;
 }
 
+html {
+  scroll-padding-top: 140px; /* Match the height of your sticky header */
+}
+
 ::selection {
   background: #0F0F0D;
   color: #F7F5F0;

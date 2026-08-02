@@ -10,7 +10,7 @@ export function WorkCard({ project: p }: WorkCardProps) {
   const firstImage = p.images[0];
 
   return (
-    <Link href={`/work/${p.slug}`} className="work-card" scroll={false}>
+    <Link href={`/work/${p.slug}`} className="work-card">
 
       <div style={{ background: p.color }} className="work-card-media">
         {firstImage?.src ? (

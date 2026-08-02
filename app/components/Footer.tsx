@@ -20,7 +20,7 @@ export function Footer() {
       <div className="layout-container footer-row">
         <div className="footer-columns">
           <div>
-            <Link href={PAGE_PATHS.Home} className="footer-brand" scroll={false}>
+            <Link href={PAGE_PATHS.Home} className="footer-brand">
               {CONTACTS.name}
             </Link>
             <p className="footer-location">{CONTACTS.location}</p>
@@ -50,7 +50,7 @@ export function Footer() {
         <ul className="footer-list">
           {(["Work", "Writing", "About", "Contact"] as PageName[]).map((l) => (
             <li key={l}>
-              <Link href={PAGE_PATHS[l]} className={`footer-link ${isActivePath(pathname, PAGE_PATHS[l]) ? "footer-link--active" : ""}`} scroll={false}>
+              <Link href={PAGE_PATHS[l]} className={`footer-link ${isActivePath(pathname, PAGE_PATHS[l]) ? "footer-link--active" : ""}`}>
                 {l}
               </Link>
             </li>
