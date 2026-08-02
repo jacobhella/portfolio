@@ -1,6 +1,6 @@
 Check out my portfolio! Built with React and Next.js.
 
-The project contains styling of both CSS3 and Tailwind.
+The project contains styling of both CSS and Tailwind.
 
 Build the project with `npm run build` and run it on localhost with `npm run dev`.
 
