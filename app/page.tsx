@@ -42,7 +42,9 @@ export default function Page() {
         <div className="layout-container">
           <div className="home-work-header">
             <p className="eyebrow text-highlight">Selected Work</p>
-            <Link href={PAGE_PATHS.Work} className="home-view-all text-highlight">View all &gt;</Link>
+            <Link href={PAGE_PATHS.Work} className="home-view-all text-highlight" scroll={false}>
+              View all &gt;
+            </Link>
           </div>
 
           <div className="card-grid">
@@ -63,7 +65,7 @@ export default function Page() {
                   Solutions that are useful, not just something that looks good.
                 </h2>
 
-                <Link href={PAGE_PATHS.About} className="home-about-link">
+                <Link href={PAGE_PATHS.About} className="home-about-link" scroll={false}>
                   Read more about me &gt;
                 </Link>
               </div>

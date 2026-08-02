@@ -18,7 +18,7 @@ export function Nav() {
     <header className="nav-header">
       <div className="nav-bar">
 
-        <Link href={PAGE_PATHS.Home} className="nav-logo" onClick={() => setMenuOpen(false)}>
+        <Link href={PAGE_PATHS.Home} className="nav-logo" onClick={() => setMenuOpen(false)} scroll={false}>
           {CONTACTS.name}
         </Link>
 
@@ -30,6 +30,7 @@ export function Nav() {
                 key={l}
                 href={PAGE_PATHS[l]}
                 className={`nav-link ${active ? "nav-link--active" : ""}`}
+                scroll={false}
               >
                 {l}
 
@@ -64,6 +65,7 @@ export function Nav() {
                 href={PAGE_PATHS[l]}
                 className={`nav-link-mobile ${active ? "nav-link-mobile--active" : ""}`}
                 onClick={() => setMenuOpen(false)}
+                scroll={false}
               >
                 {l}
               </Link>
