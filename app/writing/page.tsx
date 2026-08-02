@@ -14,7 +14,7 @@ export default function Page() {
             </h1>
 
             <p className="body-lede body-lede--end text-highlight">
-              Here you can find my writing and publications in computer science and UX.
+              Explore my writing and publications in computer science and UX.
             </p>
           </div>
 

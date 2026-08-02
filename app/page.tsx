@@ -21,7 +21,7 @@ export default function Page() {
             </h1>
 
             <p className="body-lede text-highlight">
-              I'm a driven, creative and curious developer and designer with a master's degree in Interaction Technology and Design at Umeå University.
+              I'm a driven, creative and curious developer and designer with a master's degree in Interaction Technology and Design from Umeå University.
               I'm interested in creating beautiful and functional web applications and have experience in both frontend and backend development. 
             </p>
 
@@ -70,7 +70,7 @@ export default function Page() {
                 </Link>
               </div>
               <div className="home-about-copy">
-                <p>I'm from Umeå, Sweden and have studied five years in interaction technology and computer science.</p>
+                <p>I'm from Umeå, Sweden and have studied interaction technology and computer science for five years.</p>
                 <p>I have a passion for creating innovative solutions that combine aesthetics with functionality.</p>
               </div>
             </div>

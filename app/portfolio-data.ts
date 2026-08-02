@@ -90,7 +90,7 @@ export function formatExperienceRange(e: Experience): string {
 }
 
 export const PROJECTS: Project[] = [
-  { id: 1, slug: "choose-your-starter", title: "Choose Your Starter!", category: "Side project", year: "2025", color: "#b3b3c1", desc: "A website that displays information and some fun facts on the first generation Pokémon starters, built with standard HTML5 and CSS. The purpose of this website was for me to practice my frontend skills and learn some new CSS tricks. You can find the project here: https://jacobhella.github.io/pokemon_starters/", images: [
+  { id: 1, slug: "choose-your-starter", title: "Choose Your Starter!", category: "Side project", year: "2025", color: "#b3b3c1", desc: "A website that displays information and some fun facts on the first generation Pokémon starters, built with standard HTML5 and CSS. The purpose of this website was for me to sharpen my frontend skills and experiment with new CSS tricks. You can find the project here: https://jacobhella.github.io/pokemon_starters/", images: [
     { src: `${BASE_PATH}/starters/index.png`, label: "Home" },
     { src: `${BASE_PATH}/starters/bulbasaur.png`, label: "Bulbasaur" },
     { src: `${BASE_PATH}/starters/charmander.png`, label: "Charmander" },
@@ -98,12 +98,12 @@ export const PROJECTS: Project[] = [
     { src: `${BASE_PATH}/starters/movesets.png`, label: "Movesets" },
     { src: `${BASE_PATH}/starters/facts.png`, label: "Facts" },
   ] },
-  { id: 2, slug: "tic-tac-toe", title: "Tic-Tac-Toe", category: "Side project", year: "2023", color: "#fcead7", desc: "A Tic-tac-toe game I built with C#, ASP.NET, NoSQL, HTML and SignalR. The database stored information of the accounts and the current games that were being played by the users. New accounts had to be verified by an emailsender that I set up with Sendgrid and the passwords were stored with a hashcode. A user could play locally with a bot or with a friend via WebSockets communication. SignalR is a library for ASP.NET that enables real-time communication between the server and clients with WebSockets. The project followed the MVC design pattern. The project was hosted on Azure but is currently unavailable.", images: [
+  { id: 2, slug: "tic-tac-toe", title: "Tic-Tac-Toe", category: "Side project", year: "2023", color: "#fcead7", desc: "A Tic-tac-toe game I built with C#, ASP.NET, NoSQL, HTML and SignalR. The database stored information of the accounts and the current games that were being played by the users. New accounts had to be verified by an email sender that I set up with SendGrid and the passwords were encrypted with hashes. Users could play locally with a bot or with a friend via WebSockets communication. SignalR is a library for ASP.NET that enables real-time communication between the server and clients with WebSockets. The project followed the MVC design pattern. The project was hosted on Azure but is currently unavailable.", images: [
     { src: `${BASE_PATH}/tictactoe/index.png`, label: "Home" },
     { src: `${BASE_PATH}/tictactoe/settings.png`, label: "Settings" },
     { src: `${BASE_PATH}/tictactoe/active_game.png`, label: "Active game" },
   ] },
-  { id: 3, slug: "lithium", title: "Lithium", category: "Product design", year: "2023", color: "#556378", desc: "An app for charging electric vehicles designed in Figma. This app was designed at Umeå Institute of Design. In the project we used an iterative and user-centered design approach. The app helps users find and navigate to charging stations and keep track of their charging sessions.", images: [
+  { id: 3, slug: "lithium", title: "Lithium", category: "Product design", year: "2023", color: "#556378", desc: "An electric vehicle charging app concept designed in Figma at Umeå Institute of Design. In the project we used an iterative and user-centered design approach. The app helps users find and navigate to charging stations and keep track of their charging sessions.", images: [
     { src: `${BASE_PATH}/lithium/profile.png`, label: "Profile" },
     { src: `${BASE_PATH}/lithium/map.png`, label: "Map" },
     { src: `${BASE_PATH}/lithium/driving.png`, label: "Driving" },
