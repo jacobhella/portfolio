@@ -37,8 +37,8 @@ main {
 }
 
 ::selection {
-  background: #0F0F0D;
-  color: #F7F5F0;
+  background: Highlight;
+  color: HighlightText;
 }
 
 .site-background {
@@ -225,8 +225,7 @@ h1 {
 
 .linkify-link {
   color: var(--color10);
-  text-decoration: none;
-  font-weight: 700;
+  text-decoration: underline;
 }
 
 .card-grid {

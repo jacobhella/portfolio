@@ -9,7 +9,7 @@ export function Linkify({ text }: { text: string }) {
         i % 2 === 1 ? (
           <span key={i}>
             <a href={part} target="_blank" rel="noopener noreferrer" className="linkify-link">
-              View project
+              here
             </a>.
           </span>
         ) : (
