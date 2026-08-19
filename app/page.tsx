@@ -1,8 +1,6 @@
 import Link from "next/link";
-import { PROJECTS, PAGE_PATHS, SERVICES, TESTIMONIALS } from "@/app/portfolio-data";
+import { PROJECTS, PAGE_PATHS, SERVICES } from "@/app/portfolio-data";
 import { WorkCard } from "@/app/components/WorkCard";
-import { TestimonialCard } from "@/app/components/TestimonialCard";
-import { SectionLabel } from "@/app/components/SectionLabel";
 import "@/app/home.css";
 
 export default function Page() {

@@ -112,14 +112,15 @@ h1 {
   width: fit-content;
   background: var(--color60);
   border-radius: 12px;
-  box-shadow: 0 0 4px 2px var(--color60);
   padding: 6px 14px;
+  box-shadow: 0 0 8px 6px var(--color60);
 }
 
 .panel-accent {
   background: var(--color30);
   border-radius: 28px;
   padding: 60px clamp(32px, 6vw, 80px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -4px rgba(0, 0, 0, 0.3);
 }
 
 .link-lg {
@@ -152,6 +153,7 @@ h1 {
   background: var(--color30);
   border-radius: 28px;
   padding: 18px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -4px rgba(0, 0, 0, 0.3);
 }
 
 /* Clickable/expandable row indicator, sized to match its row's header text
