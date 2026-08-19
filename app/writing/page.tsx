@@ -1,6 +1,7 @@
 import { ARTICLES, Article } from "@/app/portfolio-data";
 import "@/app/writing/writing.css";
 import { SectionLabel } from "../components/SectionLabel";
+import BorderGlow from '../components/reactbits/BorderGlow';
 
 export default function Page() {
   return (
@@ -13,6 +14,9 @@ export default function Page() {
               Writing
             </h1>
 
+
+
+
             <p className="body-lede body-lede--end text-highlight">
               Explore my writing and publications in computer science and UX.
             </p>
@@ -22,7 +26,7 @@ export default function Page() {
 
           <div className="list-panel">
             {ARTICLES.map((a, i) => (
-              <ArticleRow key={a.id} article={a} last={i === ARTICLES.length - 1} />
+                <ArticleRow key={a.id} article={a} last={i === ARTICLES.length - 1} />
             ))}
           </div>
 
@@ -39,15 +43,27 @@ interface ArticleRowProps {
 
 function ArticleRow({ article: a}: ArticleRowProps) {
   return (
-    <a href={a.url} target="_blank" rel="noopener noreferrer" className="writing-row list-panel-row">
-      <div className="writing-row-left">
-        <span className="writing-row-date">{a.date}</span>
-        <h3 className="writing-row-title">{a.title}</h3>
-      </div>
+    <BorderGlow
+      edgeSensitivity={30}
+      glowColor="30 30 30"
+      backgroundColor="var(--color60)"
+      borderRadius={10}
+      glowRadius={50}
+      glowIntensity={1}
+      coneSpread={10}
+      animated={false}
+      colors={['var(--color60)', 'var(--color60)', 'var(--color60)']}
+    >
+      <a href={a.url} target="_blank" rel="noopener noreferrer" className="writing-row">
+        <div className="writing-row-left">
+          <span className="writing-row-date">{a.date}</span>
+          <h3 className="writing-row-title">{a.title}</h3>
+        </div>
 
-      <span className="writing-row-time">{a.readTime}</span>
+        <span className="writing-row-time">{a.readTime}</span>
 
-      <span className="writing-row-arrow row-arrow">&gt;</span>
-    </a>
+        <span className="writing-row-arrow row-arrow">&gt;</span>
+      </a>
+    </BorderGlow>
   );
 }

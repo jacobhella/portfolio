@@ -38,7 +38,6 @@
   pointer-events: auto;
   border-radius: 12px;
   transition: all 0.3s;
-  background: var(--color10);
   border: 1px solid var(--color-divider);
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -4px rgba(0, 0, 0, 0.3);
 }
@@ -245,7 +244,7 @@
 
 .carousel {
   position: relative;
-  border-radius: 16px;
+  border-radius: 28px;
   overflow: hidden;
   height: clamp(300px, 45vw, 520px);
   padding: clamp(24px, 5vw, 56px);

@@ -118,7 +118,7 @@ h1 {
 
 .panel-accent {
   background: var(--color30);
-  border-radius: 20px;
+  border-radius: 28px;
   padding: 60px clamp(32px, 6vw, 80px);
 }
 
@@ -148,15 +148,10 @@ h1 {
 .list-panel {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 18px;
   background: var(--color30);
-  border-radius: 16px;
-  padding: 8px;
-}
-
-.list-panel-row {
-  background: var(--color60);
-  border-radius: 8px;
+  border-radius: 28px;
+  padding: 18px;
 }
 
 /* Clickable/expandable row indicator, sized to match its row's header text

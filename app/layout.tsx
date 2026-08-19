@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Poppins, Space_Mono } from "next/font/google";
 import { Nav } from "@/app/components/Nav";
 import { Footer } from "@/app/components/Footer";
-import PixelBlast from "@/app/components/PixelBlast";
+import PixelBlast from "@/app/components/reactbits/PixelBlast";
 import "./globals.css";
 
 const inter = Inter({
