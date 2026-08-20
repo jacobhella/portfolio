@@ -22,7 +22,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
           &lt; Back to work
         </Link>
 
-        <div className="work-detail-slider-section">
+        <div className="work-detail-carousel-section">
           <Carousel slides={project.images} background={project.color} />
         </div>
 
