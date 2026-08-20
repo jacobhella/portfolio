@@ -39,7 +39,7 @@ interface ArticleRowProps {
 
 function ArticleRow({ article: a}: ArticleRowProps) {
   return (
-      <a href={a.url} target="_blank" rel="noopener noreferrer" className="writing-row">
+      <a href={a.url} target="_blank" rel="noopener noreferrer" className="writing-row list-panel-row">
         <div className="writing-row-left">
           <span className="writing-row-date">{a.date}</span>
           <h3 className="writing-row-title">{a.title}</h3>

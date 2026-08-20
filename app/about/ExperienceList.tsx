@@ -34,7 +34,7 @@ interface ExperienceRowProps {
 
 function ExperienceRow({ experience: e, open, onToggle }: ExperienceRowProps) {
   return (
-      <div className="experience-row">
+      <div className="experience-row list-panel-row">
         <button
           type="button"
           onClick={onToggle}

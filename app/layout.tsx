@@ -54,7 +54,7 @@ export default function RootLayout({
               color="#a5c9ca"
               patternScale={2}
               patternDensity={0.5}
-              enableRipples={false}
+              enableRipples={true}
               speed={0.5}
               transparent
               edgeFade={0}
