@@ -52,7 +52,7 @@ main {
   pointer-events: all; /* background stays clickable */
 }
 
-button, a, h2, h3, p, span, img, input, [role="button"], .clickable {
+button, a, h2, h3, p, span, img, input, [role="button"], .panel-accent, .list-panel {
   pointer-events: auto;
 }
 
