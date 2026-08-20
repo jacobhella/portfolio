@@ -70,7 +70,12 @@ export const PAGE_PATHS: Record<PageName, string> = {
 // rather than "/work" — normalize before comparing against PAGE_PATHS.
 export function isActivePath(pathname: string, path: string): boolean {
   const normalized = pathname !== "/" && pathname.endsWith("/") ? pathname.slice(0, -1) : pathname;
-  return normalized === path;
+
+  if (path === "/") {
+    return normalized === "/";
+  }
+  
+  return normalized === path || normalized.startsWith(`${path}/`);
 }
 
 // Mirrors next.config.ts's basePath — links to files in public/ aren't
