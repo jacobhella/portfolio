@@ -11,7 +11,7 @@ export default function Page() {
       {/* Hero */}
       <section className="section-padding section-hero">
         <div className="layout-container">
-          <div className="grid-2col grid-2col--spaced">
+          <div className="about-hero-grid">
             <h1 className="heading-hero heading-hero--span">A bit about me</h1>
             <div className="body-lede text-highlight">
               <p>I'm Jacob, a developer and designer with a master's degree in Interaction Technology and Design. I have a great interest in computer science, and during my thesis project at Oryx Simulations I have learned how to work efficiently in agile development teams.</p>

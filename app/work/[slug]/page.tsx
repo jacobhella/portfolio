@@ -31,7 +31,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
           <span className="work-detail-year text-highlight">{project.year}</span>
         </div>
 
-        <span className="work-card-tag">{project.category}</span>
+        <span className="work-card-tag work-card-tag-padding">{project.category}</span>
 
         <p className="work-detail-desc text-highlight"><Linkify text={project.desc} /></p>
       </div>

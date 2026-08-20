@@ -52,7 +52,7 @@ main {
   pointer-events: all; /* background stays clickable */
 }
 
-button, a, h2, h3, p, span, img, input, [role="button"], .panel-accent, .list-panel {
+button, a, h2, h3, p, span, img, input, [role="button"], .panel-accent, .list-panel, .text-highlight, .carousel, .footer {
   pointer-events: auto;
 }
 
@@ -167,7 +167,7 @@ h1 {
 .list-panel-row {
   border-radius: 10px;
   background: var(--color60);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
   box-shadow:
     rgba(0, 0, 0, 0.1) 0px 1px 2px,
     rgba(0, 0, 0, 0.1) 0px 2px 4px,
@@ -254,4 +254,17 @@ h1 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
+}
+
+.about-hero-grid {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.5fr);
+  gap: 32px 80px;
+  margin-bottom: 56px;
+  display: grid;
+}
+
+@media (max-width: 768px) {
+  .about-hero-grid {
+    grid-template-columns: 1fr !important;
+  }
 }

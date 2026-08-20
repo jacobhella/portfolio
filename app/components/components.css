@@ -6,10 +6,6 @@
   border-top: 1px solid var(--color-divider);
 }
 
-.footer, .carousel {
-  pointer-events: auto;
-}
-
 /* Nav */
 
 .nav-header {
@@ -33,7 +29,7 @@
 
 .nav-bar {
   width: 100%;
-  max-width: 1160px;
+  max-width: 1150px;
   height: 64px;
   padding: 0 28px;
   display: flex;
@@ -544,4 +540,8 @@
   border: 1px solid var(--color-divider);
   border-radius: 9999px;
   padding: 2px 10px;
+}
+
+.work-card-tag-padding {
+  margin-left: 14px;
 }
