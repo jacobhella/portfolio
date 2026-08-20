@@ -1,3 +1,5 @@
+import "@/app/components/components.css";
+
 const URL_PATTERN = /(https?:\/\/[^\s]+)/g;
 
 export function Linkify({ text }: { text: string }) {

@@ -545,3 +545,10 @@
 .work-card-tag-padding {
   margin-left: 14px;
 }
+
+/* Linkify */
+
+.linkify-link {
+  color: var(--color10);
+  text-decoration: underline;
+}

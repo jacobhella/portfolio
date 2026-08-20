@@ -245,26 +245,8 @@ h1 {
   margin-bottom: 56px;
 }
 
-.linkify-link {
-  color: var(--color10);
-  text-decoration: underline;
-}
-
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
-}
-
-.about-hero-grid {
-  grid-template-columns: minmax(0, 1fr) minmax(0, 0.5fr);
-  gap: 32px 80px;
-  margin-bottom: 56px;
-  display: grid;
-}
-
-@media (max-width: 768px) {
-  .about-hero-grid {
-    grid-template-columns: 1fr !important;
-  }
 }
