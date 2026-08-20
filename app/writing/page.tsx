@@ -1,7 +1,6 @@
 import { ARTICLES, Article } from "@/app/portfolio-data";
 import "@/app/writing/writing.css";
 import { SectionLabel } from "../components/SectionLabel";
-import BorderGlow from '../components/reactbits/BorderGlow';
 
 export default function Page() {
   return (
@@ -13,9 +12,6 @@ export default function Page() {
             <h1 className="heading-hero">
               Writing
             </h1>
-
-
-
 
             <p className="body-lede body-lede--end text-highlight">
               Explore my writing and publications in computer science and UX.
@@ -43,17 +39,6 @@ interface ArticleRowProps {
 
 function ArticleRow({ article: a}: ArticleRowProps) {
   return (
-    <BorderGlow
-      edgeSensitivity={30}
-      glowColor="10 20 20"
-      backgroundColor="var(--color60)"
-      borderRadius={10}
-      glowRadius={50}
-      glowIntensity={1}
-      coneSpread={10}
-      animated={false}
-      colors={['var(--color60)', 'var(--color60)', 'var(--color60)']}
-    >
       <a href={a.url} target="_blank" rel="noopener noreferrer" className="writing-row">
         <div className="writing-row-left">
           <span className="writing-row-date">{a.date}</span>
@@ -64,6 +49,5 @@ function ArticleRow({ article: a}: ArticleRowProps) {
 
         <span className="writing-row-arrow row-arrow">&gt;</span>
       </a>
-    </BorderGlow>
   );
 }

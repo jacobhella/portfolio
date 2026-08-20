@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { Experience, formatExperienceRange } from "@/app/portfolio-data";
-import BorderGlow from "../components/reactbits/BorderGlow";
 
 interface ExperienceListProps {
   experiences: Experience[];
@@ -35,17 +34,6 @@ interface ExperienceRowProps {
 
 function ExperienceRow({ experience: e, open, onToggle }: ExperienceRowProps) {
   return (
-    <BorderGlow
-      edgeSensitivity={30}
-      glowColor="10 20 20"
-      backgroundColor="var(--color60)"
-      borderRadius={10}
-      glowRadius={50}
-      glowIntensity={1}
-      coneSpread={10}
-      animated={false}
-      colors={['var(--color60)', 'var(--color60)', 'var(--color60)']}
-    >
       <div className="experience-row">
         <button
           type="button"
@@ -69,6 +57,5 @@ function ExperienceRow({ experience: e, open, onToggle }: ExperienceRowProps) {
           </div>
         </div>
       </div>
-    </BorderGlow>
   );
 }
