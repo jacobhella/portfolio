@@ -45,7 +45,7 @@ function ArticleRow({ article: a}: ArticleRowProps) {
   return (
     <BorderGlow
       edgeSensitivity={30}
-      glowColor="20 30 30"
+      glowColor="10 20 20"
       backgroundColor="var(--color60)"
       borderRadius={10}
       glowRadius={50}
